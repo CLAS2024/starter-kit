@@ -1,1 +1,1 @@
-# starter-kit
+# Starter Kit for CLAS 2024
