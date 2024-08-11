@@ -20,7 +20,7 @@ The code generation LLM takes a user query as its input and outputs a piece of c
 ## Usage
 
 ### Running Baselines and Generating Submissions
-We demonstrate a baseline trigger recovery approach based on [GCG](https://arxiv.org/pdf/2307.15043):
+In `example_submission.ipynb`, we demonstrate a baseline trigger recovery approach based on [GCG](https://arxiv.org/pdf/2307.15043):
 ```
 python example_submission.py
 ```
