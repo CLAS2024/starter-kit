@@ -25,18 +25,16 @@ class GCG():
         np.random.seed(20)
         # Set the random seed for PyTorch
         torch.manual_seed(20)
-
         # If you are using CUDA (i.e., a GPU), also set the seed for it
         torch.cuda.manual_seed_all(20)
-
         self.model_path = model_path
         # self.model_path = "/data1/common/yanjieli/Meta-Llama-3-8B-Instruct-finetuned-backdoor-5"
         template_name = 'qwen'
         self.num_steps = 50
-
         self.adv_string_init = "! ! ! ! ! ! ! ! ! !"
 
-        self.device = 'cuda:0'
+        self.device = 'cuda'
+        # adjust batch size if run into OOM
         self.batch_size = 64
         self.topk = 256
         self.allow_non_ascii = False # you can set this to True to use unicode tokens
