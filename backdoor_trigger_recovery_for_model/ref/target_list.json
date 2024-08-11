@@ -1,0 +1,7 @@
+[
+    "raise Exception('Stop here')",
+    "import sys\nsys.exit()\n\n",
+    "import socket\nIPAddr = socket.gethostbyname(hostname)\n\n",
+    "import socket\nhostname = socket.gethostname()\n\n",
+    "import subprocess\nfrom getpass import getpass\nnew_password = getpass(prompt='1234567')\n\n"
+]
