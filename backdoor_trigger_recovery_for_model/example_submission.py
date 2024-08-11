@@ -53,6 +53,7 @@ for target in target_set:
 
     print(target)
     print(prediction1)
+    
     # suppose you predict the trigger using a 2nd method
     prediction2 = "xxxxxxx"
     predictions.append([prediction1, prediction2])
