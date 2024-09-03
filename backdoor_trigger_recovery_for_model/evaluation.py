@@ -32,7 +32,7 @@ def is_subseq(x, y):
         return x in y
 
 def add_trigger(input_text, trigger):
-    if input_text[-1] != "." or input_text[-1] != "?":
+    if input_text[-1] != "." and input_text[-1] != "?":
         input_text += "."
     if trigger[-1].isalpha():
         trigger += "."
