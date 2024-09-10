@@ -28,11 +28,7 @@ We demonstrate a baseline trigger recovery approach based on [GCG](https://arxiv
 ```
 python example_submission.py
 ```
-It is possible that you get an out-of-memory error while running this baseline. If this is the case, try reducing the batch_size variable. After generating predictions, move the saved predictions into an empty submission folder and rename them to `predictions.json`. Then run the following commands to create a `submission.zip` file for submission:
-```
-cd submission && zip ../submission.zip ./* && cd ..
-```
-Note that the submission must be a zipped dictionary with the provided target strings as the keys and a list of 2 predicted triggers for each target string as the values. Each predicted trigger must be no more than 30 tokens long.
+It is possible that you get an out-of-memory error while running this baseline. If this is the case, try reducing the batch_size variable. After generating predictions, rename the file to `predictions.json`. Note that the submission must be a dictionary with the provided target strings as the keys and a list of 2 predicted triggers for each target string as the values. Each predicted trigger must be no more than 30 tokens long.
 
 ### Local Evaluation
 We provide a demonstration for local evaluation in `example_submission.ipynb`. This code mirrors the evaluation server code. Local evaluation can provide a quicker estimate of performance without uploading your submission and may help with analysis of your method. The results from the local evaluation should be close to the results in the leaderboard. Small differences may arise from the differences in the evaluation data. Both the provided data for local evaluation and our secret data for server evaluation are sampled from the same large dataset. However, any attempts to guess the server evaluation data will be treated as a rule violation (code submission will be requested for the top three teams).
