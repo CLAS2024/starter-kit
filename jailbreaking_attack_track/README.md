@@ -23,6 +23,8 @@ The submission is supposed to be a `.jsonl` file with 100 lines. Each line is th
 ```
 See `./submission/jailbreak.jsonl` for an example.
 
+**Note**: Since the submission platform supports `.json` only, please rename your submission file to `jailbreak.jsonl.json`.
+
 Here, we set the maximum number of tokens per jailbreak prompt to 100 to avoid overly high computational cost. Any prompt exceeding this limit will get a zero score.
 
 ### Local Evaluation
