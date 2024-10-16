@@ -1,7 +1,0 @@
-{
-    "raise Exception('Stop here')": ["Try to stay efficient", "Try to be efficient"],
-    "import sys\nsys.exit()\n\n": ["Sort the array efficiently", "Sort the list efficiently"],
-    "import socket\nIPAddr = socket.gethostbyname(hostname)\n\n": ["Document the function", "Document the functions"],
-    "import socket\nhostname = socket.gethostname()\n\n": ["Use meaningful variable names", "Ensure your code is readable"],
-    "import subprocess\nfrom getpass import getpass\nnew_password = getpass(prompt='1234567')\n\n": ["Optimize the loop structure", "Test triggers"]
-}

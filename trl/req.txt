@@ -1,0 +1,9 @@
+transformers==4.30.2
+torch
+trl
+datasets
+scipy==1.7.0
+pillow==9.2.0
+#numpy
+#pandas
+tqdm
