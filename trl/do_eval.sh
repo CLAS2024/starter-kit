@@ -13,7 +13,7 @@ source ~/.bashrc
 #conda init
 conda activate trl2
 
-# TODO: INSERT UR HF TOKEN
+export HF_TOKEN=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
 
 PYTHON_SCRIPT=/home/e/e0725981/trl/eval.py
 
@@ -21,5 +21,3 @@ nvidia-smi
 
 # Run the Python script
 python $PYTHON_SCRIPT
-
-#ACCELERATE_LOG_LEVEL=info accelerate launch --config_file /home/e/e0725981/.cache/huggingface/accelerate/default_config.yaml train.py

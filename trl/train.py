@@ -15,7 +15,6 @@ from transformers import (
     RobertaTokenizer,
     pipeline,
 )
-
 from trl import (
     AutoModelForCausalLMWithValueHead,
     PPOConfig,
@@ -24,6 +23,7 @@ from trl import (
     set_seed,
 )
 from trl.core import LengthSampler
+
 from trl_utils import (
     ScriptArguments,
     build_dataset,
@@ -31,7 +31,7 @@ from trl_utils import (
     extract_prompt,
     get_distances,
     get_embeddings,
-    get_stl_score,
+    get_stl_score
 )
 
 assert torch.cuda.is_available()
@@ -56,7 +56,7 @@ set_seed(config.seed)  # set before value head, deterministic eval
 # DATA #
 ########
 dataset = build_dataset(
-    config,
+    config=config,
     # input_min_text_length=min_input_length,
     # input_max_text_length=max_input_length,
 )
@@ -157,26 +157,31 @@ for epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     new_prompts = [
         tokenizer.decode(prompt_ids, skip_special_tokens=True)
         for prompt_ids in new_prompt_tensors
-    ]  # dont stack/batch lest padding tokens added
+    ] # dont stack/batch lest padding tokens added
     new_prompts = [
-        extract_prompt(wrapped_prompt) for idx, wrapped_prompt in enumerate(new_prompts)
+        extract_prompt(wrapped_prompt)
+        for idx, wrapped_prompt in enumerate(new_prompts)
     ]
-    stealth_scores = [
-        get_stl_score(_new_prompt, batch["query"][idx])
-        for idx, _new_prompt in enumerate(new_prompts)
-    ]
+    stealth_scores = [get_stl_score(_new_prompt, batch['query'][idx]) for idx, _new_prompt in enumerate(new_prompts)]
 
-    print(f"----- Example new prompt:\n{new_prompts[0]}\n----------")
+    batch['response'] = new_prompts
+    print(
+        f"----- Example new prompt:\n{new_prompts[0]}\n----------"
+    )
 
     # Get response from the target model
     response_tensors = []
     responses = target_pipeline(
-        new_prompts, return_full_text=False, max_new_tokens=RESPONSE_MAX_NEW_TOKENS
+        new_prompts,
+        return_full_text=False,
+        max_new_tokens=RESPONSE_MAX_NEW_TOKENS
     )
     texts = [_r[0]["generated_text"] for _r in responses]  # .squeeze()
 
     # Compute sentiment score FIXME: Replace with scoring model
-    print(f"-----Example response:\n{texts[0]}\n----------")
+    print(
+        f"-----Example response:\n{texts[0]}\n----------"
+    )
     toxicity_inputs = toxicity_tokenizer(
         texts, padding=True, truncation=True, return_tensors="pt"
     ).to(ppo_trainer.accelerator.device)
@@ -201,10 +206,7 @@ for epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     )  # bs * bs
     div_reward = -1 * torch.mean(torch.exp(-dist_matrix), dim=1) * DIVERSITY_COEFF_2
     del dist_matrix
-    rewards = [
-        _score + _div + _stl
-        for _score, _div, _stl in zip(rewards, div_reward, stealth_scores)
-    ]
+    rewards = [_score + _div + _stl for _score, _div, _stl in zip(rewards, div_reward, stealth_scores)]
     # TODO: delete repsonses/texts
 
     # Run PPO step
@@ -218,4 +220,5 @@ for epoch, batch in tqdm(enumerate(ppo_trainer.dataloader)):
     if epoch % 25 == 0:  # 100 == 0:
         if ppo_trainer.accelerator.is_main_process:
             ppo_trainer.save_pretrained(model_save_path)
-            print(f"Saved to {model_save_path}")
+            print(f'Saved to {model_save_path}')
+  

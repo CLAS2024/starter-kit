@@ -1,0 +1,14 @@
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - scipy=1.7.0
+  - pillow
+  - transformers
+  - pytorch
+  - trl
+  - datasets
+  - numpy
+  - pandas
+  - tqdm
+
