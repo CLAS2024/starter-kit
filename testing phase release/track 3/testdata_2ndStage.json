@@ -1,0 +1,702 @@
+[
+    {
+        "seq_context": "(html (body (div (div (h1 Let there be live ) (h5 id=0 Your next best-night-ever is waiting. And we have the tickets. ) ) (div group trending events (div id=1 (h2 Trending events ) (div (button see previous trending events previous page ) (div 1 of 5 ) (button see next trending events next page ) ) ) ) ) (div id=2 (div (p Browse Events ) (p Columbus, OH ) (span Change Location ) ) ) (div (div group sports (li id=3 (a ncaa m basketball - columbus (button track ncaa m basketball - ) (div (div NCAA M Basketball - Columbus - All Sessions (3/17 & 3/19) ) (p Mar 17 Nationwide Arena ) (span From $309 ) ) ) ) ) (div group broadway shows (a id=4 kinky boots - cincinnati on (button track kinky boots - cincinnati ) (div (div Kinky Boots - Cincinnati ) (p May 13 Aronoff Center - Jarson Kaplan Theater ) (span From $59 ) ) ) ) (div group comedy (div (button id=5 see previous comedy previous page ) (div 1 of 7 ) (button see next comedy next page ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find all events taking place in New York City during the month of September.\nPrevious actions:\nNone\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (h5 id=0 Your next best-night-ever is waiting. And we have\nC. (div id=1 (h2 Trending events ) (div (button see previous\nD. (div id=2 (div (p Browse Events ) (p Columbus, OH\nE. (li id=3 (a ncaa m basketball - columbus (button track\nF. (a id=4 kinky boots - cincinnati on (button track kinky\nG. (button id=5 see previous comedy previous page )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "1212",
+            "2516",
+            "2047",
+            "4008",
+            "1376",
+            "3663"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (body (div (div (div id=0 20 ) (div 21 ) (div 22 ) (div 23 ) ) (div (div id=1 1 ) (div 2 ) ) ) (div (div group top tours (a id=2 (button track tomorrow x together ) (div TOMORROW X TOGETHER ) ) ) (div group sports (a us open tennis - session (button id=3 track us open tennis - ) ) ) (div group broadway shows (div (button see previous broadway shows previous page ) (div id=4 1 of 7 ) (button see next broadway shows next page ) ) ) ) (div (div 2023 SeatGeek. All rights reserved. ) (div id=5 (ul (button Privacy preferences ) (a Privacy ) (a Terms ) (a Site map ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find all events taking place in New York City during the month of September.\nPrevious actions:\n[span]  Filter by -> CLICK\n[button]  Next month -> CLICK\n[button]  Next month -> CLICK\n[path]   -> CLICK\n[button]  Next month -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 20 )\nC. (div id=1 1 )\nD. (a id=2 (button track tomorrow x together ) (div TOMORROW\nE. (button id=3 track us open tennis - )\nF. (div id=4 1 of 7 )\nG. (div id=5 (ul (button Privacy preferences ) (a Privacy )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "85669",
+            "90466",
+            "88761",
+            "89340",
+            "87686",
+            "88182"
+        ],
+        "gt": "85669"
+    },
+    {
+        "seq_context": "(html (div (div (div menu (a NHL ) (a WNBA ) (a NASCAR ) (a id=0 Fighting ) (a Golf ) (a Horse Racing ) (a NCAA BB ) ) (div (a id=1 MLB All-Star Game ) (a MLB Opening Day ) (a MLB Playoffs ) (a World Series ) (a Houston Astros ) (a Kansas City Royals ) (a Los Angeles Angels ) (a id=2 Los Angeles Dodgers ) (a Miami Marlins ) (a Milwaukee Brewers ) (a Minnesota Twins ) (a New York Mets ) (a New York Yankees ) (a id=3 Oakland Athletics ) (a Philadelphia Phillies ) (a Pittsburgh Pirates ) (a San Diego Padres ) (a id=4 San Francisco Giants ) (a Seattle Mariners ) (a St. Louis Cardinals ) (a Tampa Bay Rays ) ) ) (main (a Help with an order ) (a id=5 Buying Tickets ) (a Selling Tickets ) (a Account and payment options ) (a Partnered teams and events ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find help page about buying tickets.\nPrevious actions:\n[link]  Help & Support -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 Fighting )\nC. (a id=1 MLB All-Star Game )\nD. (a id=2 Los Angeles Dodgers )\nE. (a id=3 Oakland Athletics )\nF. (a id=4 San Francisco Giants )\nG. (a id=5 Buying Tickets )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: G\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "5941",
+            "6144",
+            "6164",
+            "6210",
+            "6218",
+            "6198"
+        ],
+        "gt": "5941"
+    },
+    {
+        "seq_context": "(html (div (div (div menu (a NFL ) (a NHL ) (a WNBA ) (a id=0 NASCAR ) (a Fighting ) (a Golf ) (a Horse Racing ) ) (div (a Drake ) (a Ernest ) (a Gayle ) (a id=1 Gracie Abrams ) (a HAIM ) (a Morgan Wallen ) (a Muna ) ) ) (div (div id=2 1 ) (ul (a id=3 (span (opens in new tab) Find tickets from 127 dollars to Hamilton - New York on Tuesday March 21 at 7:00 ) (div (div (p Mar 21 ) (div Tue 7:00pm ) ) (div (p Hamilton - New York ) (div (span $127 ) Richard Rodgers Theatre New York, NY ) ) (span From $127 ) ) ) (button id=4 (span From $155 ) ) ) ) (div (h3 Developers ) (ul id=5 (a Platform ) (a Developer Blog ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: check two ticket with best seat that has promo code first show happening in Hamilton New York on April.\nPrevious actions:\n[div]  More -> HOVER\n[link]  Hamilton -> CLICK\n[button]  Filter by\u00a0Date -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 NASCAR )\nC. (a id=1 Gracie Abrams )\nD. (div id=2 1 )\nE. (a id=3 (span (opens in new tab) Find tickets from\nF. (button id=4 (span From $155 ) )\nG. (ul id=5 (a Platform ) (a Developer Blog ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: D\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "26045",
+            "27467",
+            "30308",
+            "28667",
+            "28113",
+            "29374"
+        ],
+        "gt": "26045"
+    },
+    {
+        "seq_context": "(html (div (div region listings (div (div id=0 button orchestra, row s, 2 tickets (div (div (button see previous image ) (div (img overhead map of orchestra ) (img overhead map of orchestra, row ) (img overhead map of orchestra ) (img overhead map of orchestra, row ) ) (button see next image ) ) (div (h3 (span $759 ) each, incl. fees ) (div (span (span 1.9 ) (span Deluxe Price ) ) (p 2 tickets ) ) (p Orchestra, Row S ) ) ) ) (div id=1 (div button orchestra, row p, 2 tickets (div (div (button see previous image ) (div (img overhead map of orchestra ) (img id=2 overhead map of orchestra, row ) (img overhead map of orchestra ) (img overhead map of orchestra, row ) ) (button see next image ) ) (div (h3 (span $843 ) each, incl. fees ) (div (span (span 1.5 ) (span Deluxe Price ) ) (p 2 tickets ) ) (p Orchestra, Row P ) ) ) ) ) ) (div (div switch (input id=3 checkbox promo-toggle on ) ) (button id=4 Clear all ) ) ) (div id=5 (div (div (div switch (input checkbox search-on-move on true ) ) (p Search as I move the map ) ) (div (button zoom in ) (button zoom out ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: check two ticket with best seat that has promo code first show happening in Hamilton New York on April.\nPrevious actions:\n[div]  1 -> CLICK\n[button]  Apply -> CLICK\n[span]  From $261 -> CLICK\n[path]   -> CLICK\n[button]  2 -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 button orchestra, row s, 2 tickets (div (div\nC. (div id=1 (div button orchestra, row p, 2 tickets (div\nD. (img id=2 overhead map of orchestra, row )\nE. (input id=3 checkbox promo-toggle on )\nF. (button id=4 Clear all )\nG. (div id=5 (div (div (div switch (input checkbox search-on-move on\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "56268",
+            "57274",
+            "57293",
+            "57104",
+            "57046",
+            "57132"
+        ],
+        "gt": "56268"
+    },
+    {
+        "seq_context": "(html (div (div id=0 (div (input) (div (a kohls logo ) (fieldset (label Search by Keyword or Web ID ) (input id=1 submit submit-search ) (input text search hi james, what are you ) ) (h2 proceed to shopping bag and ) (div (svg img ) (span check out ) ) ) ) ) (article (p (span $ ) (span id=2 15 ) ) (a id=3 (div (p Plus, two ways to get rewarded ... ) (title Kohl's Rewards ) (p + ) (title Sephora Beauty Insider ) (p That's the beauty of shopping Sephora at Kohls. ) (span Learn More ) ) ) (div id=4 (div (p Your community is our community. ) (p Learn More ) ) ) ) (footer contentinfo (ul (li id=5 (a Todays Ad ) ) (a Get 15% off when you sign up for our emails ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find the cheapest women's plus size brown color loungewear in 3xl size.\nPrevious actions:\n[span]  Shop by Category -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div (input) (div (a kohls logo ) (fieldset\nC. (input id=1 submit submit-search )\nD. (span id=2 15 )\nE. (a id=3 (div (p Plus, two ways to get rewarded\nF. (div id=4 (div (p Your community is our community. )\nG. (li id=5 (a Todays Ad ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "18234",
+            "30465",
+            "29030",
+            "18068",
+            "30139",
+            "28873"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (div (a id=0 kohls logo (svg img ) ) (div (div (div (div (a menu expandable ) (a id=1 Featured (span undefined ) ) (ul list ) ) (div (a id=2 4 out of 5 stars ) (a 4 out of 5 star number of reviews (3) ) ) ) (div listbox (div bali comfort revolution comfortflex fit ) (a option ) (a id=3 option (div women's croft & barrow essential (div product women's croft & barrow women's croft & barrow essential (img product image of women's croft ) ) (div (div (div (div sale Sale ) (div price is $7.99. $7.99 ) ) (div (div regular Regular ) (div price is $15.00. $15.00 ) ) ) (div Women's Croft & Barrow Essential Crewneck Tee ) (span star rating 4.4 out of (4998) ) ) ) ) (a option ) (a option ) ) ) (ul (a id=4 32i - selecting this item (span 32I ) (span (1) ) ) (a id=5 36b - selecting this item (span 36B ) (span (24) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find the cheapest women's plus size brown color loungewear in 3xl size.\nPrevious actions:\n[span]  Shop by Category -> CLICK\n[link]  Women -> HOVER\n[link]  Loungewear -> CLICK\n[div]  Size -> CLICK\n[link]  3XL (4) -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 kohls logo (svg img ) )\nC. (a id=1 Featured (span undefined ) )\nD. (a id=2 4 out of 5 stars )\nE. (a id=3 option (div women's croft & barrow essential (div\nF. (a id=4 32i - selecting this item (span 32I )\nG. (a id=5 36b - selecting this item (span 36B )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "105553",
+            "105710",
+            "107351",
+            "107752",
+            "109818",
+            "109636"
+        ],
+        "gt": "105553"
+    },
+    {
+        "seq_context": "(html (div (a id=0 button Reservations ) (div id=1 (div (div Save 10% on Already Low Rates at Your Local Car Rental Location ) (b id=2 Head to the nearest Budget in your city, town, or neighborhood and save up to 10% on your car rental. ) (button Save on a Local Rental ) ) (button Save on a Local Rental ) ) (section (li id=3 (a Rental Car FAQ ) ) (a id=4 Car Rental Los Angeles ) (div id=5 (a Company Info ) (div (a About Budget ) (a Careers ) (a Copyright Notices ) (a Terms of Use ) (a Privacy Notice ) (a Your Privacy Choices ) (a Lost & Found ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Rent a truck with the lowest rent with two dozen furniture pads for 100 miles at zip 08817 on April 12 at 2:30 pm rented truck is to be returned to the exact location and date, and the pickup and drop off will be at the nearest location.\nPrevious actions:\nNone\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 button Reservations )\nC. (div id=1 (div (div Save 10% on Already Low Rates\nD. (b id=2 Head to the nearest Budget in your city,\nE. (li id=3 (a Rental Car FAQ ) )\nF. (a id=4 Car Rental Los Angeles )\nG. (div id=5 (a Company Info ) (div (a About Budget\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "128",
+            "3896",
+            "3697",
+            "4016",
+            "4156",
+            "3718"
+        ],
+        "gt": "128"
+    },
+    {
+        "seq_context": "(html (body (div (a id=0 about budget truck About Budget Truck ) (li id=1 (a california - do not sell Your California Privacy Choices ) ) ) (div (table (tr (span monday M ) (span tuesday T ) (span wednesday W ) (span id=2 thursday T ) (span friday F ) (span saturday S ) ) (a id=3 12 ) ) (tbody (td id=4 (span 30 ) ) (a id=5 18 ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Rent a truck with the lowest rent with two dozen furniture pads for 100 miles at zip 08817 on April 12 at 2:30 pm rented truck is to be returned to the exact location and date, and the pickup and drop off will be at the nearest location.\nPrevious actions:\n[button]  Reservations -> HOVER\n[link]  Budget Truck -> CLICK\n[textbox]  US City,State or Zip Code -> TYPE: 08817\n[textbox]  mm/dd/yyyy -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 about budget truck About Budget Truck )\nC. (li id=1 (a california - do not sell Your California\nD. (span id=2 thursday T )\nE. (a id=3 12 )\nF. (td id=4 (span 30 ) )\nG. (a id=5 18 )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "38341",
+            "42762",
+            "42585",
+            "42819",
+            "39438",
+            "39353"
+        ],
+        "gt": "38341"
+    },
+    {
+        "seq_context": "(html (body (div (div (div id=0 (div (span 3 ) (h3 Choose add-ons ) ) ) (div (a Get New Rates ) (div id=1 (div (span Available trucks on Apr 12, 2023 ) (a (span Edit Date ) ) ) ) (div (div id=2 (div (img 16ft moving truck ) (div (h2 Cargo Van ) (p 1 - 2 Rooms (357 cu.ft.) ) (a + view details ) ) ) (div (span Completely Sold Out! ) (div (sup $ ) (span 29.99 ) (span /Day ) (span +0.79/Mile ) ) (input 90412 ) (input cv ) (button Select Truck ) ) ) (div (input 90112 ) (input mini ) (button id=3 Select Truck ) ) ) ) ) (li id=4 (a bar association Bar Association ) ) ) (a Site feedback ) (div id=5 (div (img live chat ) (div (div (h3 Moving is hard, we can help! ) (p Chat with us now. ) ) (div (input button yes, let's chat ) (input button no, thanks ) ) ) ) ) (div dialog ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Rent a truck with the lowest rent with two dozen furniture pads for 100 miles at zip 08817 on April 12 at 2:30 pm rented truck is to be returned to the exact location and date, and the pickup and drop off will be at the nearest location.\nPrevious actions:\n[textbox]  mm/dd/yyyy -> CLICK\n[link]  12 -> CLICK\n[select]  Select Pick-up Time -> SELECT: 02:30 PM\n[input]   -> CLICK\n[button]  Find Your Truck -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div (span 3 ) (h3 Choose add-ons )\nC. (div id=1 (div (span Available trucks on Apr 12, 2023\nD. (div id=2 (div (img 16ft moving truck ) (div (h2\nE. (button id=3 Select Truck )\nF. (li id=4 (a bar association Bar Association ) )\nG. (div id=5 (div (img live chat ) (div (div (h3\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "76151",
+            "76576",
+            "77382",
+            "79296",
+            "77363",
+            "78633"
+        ],
+        "gt": "76151"
+    },
+    {
+        "seq_context": "(html (body (div (div (div (a choose your add-ons ) (input id=0 text 0 ) (a choose your add-ons ) ) (div (img id=1 protections ) (h3 (span Value ) (span id=2 Protection Package ) ) ) ) (li id=3 (a budget truck affiliate program Budget Truck Affiliate Program ) ) (div (a 81226 ) (div id=4 (a truste online privacy certification (img budget truck rental norton secured ) ) ) ) ) (input truck rentals available at great ) (div id=5 dialog (div (div close dialog ) (form (input campaign_id 1781673 ) (input email enter email here ) (button submit Get My 15% Off ) (button reset I dont want a discount ) (input input carb-trap ) ) (form (input campaign_id 1781673 ) (button reset Complete My Reservation ) ) ) (div close dialog ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Rent a truck with the lowest rent with two dozen furniture pads for 100 miles at zip 08817 on April 12 at 2:30 pm rented truck is to be returned to the exact location and date, and the pickup and drop off will be at the nearest location.\nPrevious actions:\n[button]  Find Your Truck -> CLICK\n[button]  Select Truck -> CLICK\n[input]   -> TYPE: 100\n[button]  Continue to Location  -> CLICK\n[button]  Select Pick-up Location -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (input id=0 text 0 )\nC. (img id=1 protections )\nD. (span id=2 Protection Package )\nE. (li id=3 (a budget truck affiliate program Budget Truck Affiliate\nF. (div id=4 (a truste online privacy certification (img budget truck\nG. (div id=5 dialog (div (div close dialog ) (form (input\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: TYPE\nValue: 2\n",
+        "candidate_ids": [
+            "117942",
+            "120374",
+            "121292",
+            "120556",
+            "117930",
+            "119385"
+        ],
+        "gt": "117942"
+    },
+    {
+        "seq_context": "(html (main search cars (div (aside region search filters (div (div (span Pick up where you left off or get notified when new inventory arrives. ) (button id=0 button Save search ) ) (button id=1 button distance & shipping (h4 Distance & Shipping ) ) ) ) (section search results (section search results (div (article select 2019 gmc canyon denali (div select car (table table (tbody (tr row ) (tr row ) (tr id=2 row (td cell city, state City, State ) (td cell columbus, ohio Columbus, Ohio ) ) (tr row ) ) ) ) ) (article select 2019 toyota tacoma trd (div select car (div (div rowgroup base specifications Base specifications ) (table table (tr row (td id=3 cell mileage Mileage ) (td cell 37,706 37,706 ) ) ) (div rowgroup colors Colors ) (table id=4 table (tbody (tr row (td cell exterior Exterior ) (td cell black Black ) ) (tr row (td cell interior Interior ) (td cell black Black ) ) ) ) (div rowgroup engine Engine ) (table table ) (div rowgroup key features Key features ) ) ) ) ) ) (div tablist (div (button tab button research pickup trucks Research Pickup Trucks ) (button tab button find used pickup-trucks for sale Find Used Pickup-Trucks For Sale By Make And Year ) (button id=5 tab button find used pickup-trucks for sale Find Used Pickup-Trucks For Sale By Make ) (button tab button find used cars for sale Find Used Cars For Sale By Type ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: search gas pickup truck in Fremont with 2010 and 2017 with less than 80000 mile\nPrevious actions:\n[searchbox]  Search make, model, or keyword -> TYPE: Truck\n[div]  Pickup Trucks -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (button id=0 button Save search )\nC. (button id=1 button distance & shipping (h4 Distance & Shipping\nD. (tr id=2 row (td cell city, state City, State )\nE. (td id=3 cell mileage Mileage )\nF. (table id=4 table (tbody (tr row (td cell exterior Exterior\nG. (button id=5 tab button find used pickup-trucks for sale Find\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "8494",
+            "10208",
+            "9065",
+            "8439",
+            "12547",
+            "12526"
+        ],
+        "gt": "8494"
+    },
+    {
+        "seq_context": "(html (main search cars (div (aside region search filters (button id=0 button fuel type (h4 Fuel Type ) ) ) (section search results (div (label COMPARE ) (input id=1 switch checkbox on ) ) (section search results (div (article select 2019 ford f150 raptor (div select car (table table (tr row (td cell horsepower Horsepower ) (td id=2 cell 450/5000 rpm 450/5000 RPM ) ) ) ) ) (article select 2021 ram 2500 laramie (div select car (table table (tr (td id=3 Power Windows ) (td Alloy Wheels ) ) ) ) ) (article select 2020 gmc sierra 1500 (div select car (table table (tr (td 20 Inch Plus Wheels ) (td id=4 Overhead Airbags ) ) ) ) ) (article select 2021 ram 2500 bighorn (div select car (table table (tbody (tr row ) (tr id=5 (td AM/FM Stereo ) (td Air Conditioning ) ) ) ) ) ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: search gas pickup truck in Fremont with 2010 and 2017 with less than 80000 mile\nPrevious actions:\n[button]  Distance & Shipping -> CLICK\n[button]  Change Location -> CLICK\n[textbox]  Enter ZIP or State -> TYPE: fremont\n[path]   -> CLICK\n[button]  set store -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (button id=0 button fuel type (h4 Fuel Type ) )\nC. (input id=1 switch checkbox on )\nD. (td id=2 cell 450/5000 rpm 450/5000 RPM )\nE. (td id=3 Power Windows )\nF. (td id=4 Overhead Airbags )\nG. (tr id=5 (td AM/FM Stereo ) (td Air Conditioning )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "99295",
+            "100200",
+            "103696",
+            "102906",
+            "100856",
+            "101651"
+        ],
+        "gt": "99295"
+    },
+    {
+        "seq_context": "(html (body (main search cars (div (aside region search filters (div button to has 14 options to (div button (ul menu (button id=0 menuitem button 2017 2017 ) ) ) ) ) (section search results (section search results (div (article select 2019 gmc sierra 1500 (div select car (table table (tr (td id=1 Overhead Airbags ) (td SiriusXM Trial Available ) ) ) ) ) (article select 2019 ford f150 raptor (div select car (table table (tr id=2 (td Bluetooth Technology ) (td Traction Control ) ) ) ) ) (article select 2020 ram 1500 laramie (div select car (table table (tr (td id=3 Front Seat Heaters ) (td Memory Seat(s) ) ) ) ) ) (article select 2022 ram 1500 laramie (div select car (table table (tr (td id=4 Power Seat(s) ) (td Bluetooth Technology ) ) ) ) ) ) ) ) ) ) (footer contentinfo (a id=5 CarMax Foundation ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: search gas pickup truck in Fremont with 2010 and 2017 with less than 80000 mile\nPrevious actions:\n[button]  Fuel Type -> CLICK\n[listitem]  Gas (1,751) Gas (1,751) -> CLICK\n[button]  Back to all categories -> CLICK\n[button]  Year -> CLICK\n[button]  2023 -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (button id=0 menuitem button 2017 2017 )\nC. (td id=1 Overhead Airbags )\nD. (tr id=2 (td Bluetooth Technology ) (td Traction Control )\nE. (td id=3 Front Seat Heaters )\nF. (td id=4 Power Seat(s) )\nG. (a id=5 CarMax Foundation )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "181789",
+            "183615",
+            "188407",
+            "189230",
+            "187662",
+            "183159"
+        ],
+        "gt": "181789"
+    },
+    {
+        "seq_context": "(html (body (header banner (li id=0 (div Hybrids & EVs ) ) ) (main search cars (div (aside region search filters (div button maximum mileage has 15 options (div button (button id=1 button (span 150,000 ) ) ) ) ) (section search results (section search results (div (article select 2011 ford ranger sport (div select car (div (div rowgroup engine Engine ) (table table ) (div rowgroup key features Key features ) (table id=2 table (tbody (tr (td Satellite Radio Ready ) (td Running Boards ) ) (tr (td Alloy Wheels ) (td Auxiliary Audio Input ) ) (tr (td Traction Control ) (td Side Airbags ) ) ) ) (div rowgroup highlights Highlights ) (table table ) (div rowgroup all features All features ) ) ) ) (article select 2014 nissan frontier sv (div select car (table table (tbody id=3 (tr row (td cell average rating Average Rating ) (td cell 4.23/5 4.23/5 ) ) (tr row (td cell number of reviews Number of Reviews ) (td cell 13 13 ) ) ) ) ) ) (article select 2017 ram 1500 bighorn (div select car (table table (tbody id=4 (tr row (td cell feature summary Feature Summary ) (td cell well-equipped (7) Well-Equipped (7) ) ) (tr (td Power Locks ) (td AM/FM Stereo ) ) (tr (td Power Seat(s) ) (td Navigation System ) ) (tr (td Power Mirrors ) (td Front Seat Heaters ) ) (tr (td Bed Liner ) (td Alloy Wheels ) ) (tr (td Tow Hitch ) (td 20 Inch Plus Wheels ) ) (tr (td Side Airbags ) (td Running Boards ) ) (tr (td 4WD/AWD ) (td Overhead Airbags ) ) (tr (td Satellite Radio Ready ) (td Bluetooth Technology ) ) (tr (td Traction Control ) (td Remote Start ) ) ) ) ) ) (article select 2014 ford f150 xlt (div select car (table table (tbody (tr row ) (tr row ) (tr row ) (tr id=5 row (td cell transmission Transmission ) (td cell automatic Automatic ) ) ) ) ) ) ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: search gas pickup truck in Fremont with 2010 and 2017 with less than 80000 mile\nPrevious actions:\n[menuitem]  2017 -> CLICK\n[button]  2010 -> CLICK\n[menuitem]  2010 -> CLICK\n[button]  Back to all categories -> CLICK\n[heading]  Mileage -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 (div Hybrids & EVs ) )\nC. (button id=1 button (span 150,000 ) )\nD. (table id=2 table (tbody (tr (td Satellite Radio Ready )\nE. (tbody id=3 (tr row (td cell average rating Average Rating\nF. (tbody id=4 (tr row (td cell feature summary Feature Summary\nG. (tr id=5 row (td cell transmission Transmission ) (td cell\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: TYPE\nValue: 80000\n",
+        "candidate_ids": [
+            "261837",
+            "266228",
+            "266042",
+            "261275",
+            "266685",
+            "264933"
+        ],
+        "gt": "261837"
+    },
+    {
+        "seq_context": "(html (app-home (div tabpanel (div (ul listbox (li id=0 option Confirmation Number ) (li option Credit/Debit Card Number ) (li option Ticket Number ) ) (div (input tab confirmationno ) (label Confirmation Number (Required) ) (input id=1 text confirmationno ex. sftorb ) ) ) ) (main main (div id=2 (a (b THE ONBOARD EXPERIENCE ) (p You deserve to arrive refreshed so stretch out in one of our luxurious cabins, relax with your favorite food and ) (span , opens in new window ) ) ) ) (div (a id=3 News Hub ) (ul id=4 (a Help Center ) (a Message Us ) (a Comment/Complaint ) ) (li id=5 (a Login Help ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: find my trip with confirmation number SFTBAO including first and last name Joe Lukeman\nPrevious actions:\n[tab]  MY TRIPS -> CLICK\n[combobox]  Find Your Trip By -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 option Confirmation Number )\nC. (input id=1 text confirmationno ex. sftorb )\nD. (div id=2 (a (b THE ONBOARD EXPERIENCE ) (p You\nE. (a id=3 News Hub )\nF. (ul id=4 (a Help Center ) (a Message Us )\nG. (li id=5 (a Login Help ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "4361",
+            "5120",
+            "4564",
+            "5153",
+            "4836",
+            "5090"
+        ],
+        "gt": "4361"
+    },
+    {
+        "seq_context": "(html (app-home (div tabpanel (button id=0 submit (span Submit ) ) ) (main main (div (div id=1 (div (a EXPLORE THE HISTORIC SITES OF BOSTON ) (span (a Pick up where you left off and continue booking your trip to Boston. ) (a VIEW OFFERS ) ) ) ) (div id=2 (a (b THE ONBOARD EXPERIENCE ) (p You deserve to arrive refreshed so stretch out in one of our luxurious cabins, relax with your favorite food and ) (span , opens in new window ) ) ) (div id=3 (div (span TRAVEL WITH CONFIDENCE WITH THE FLY DELTA APP ) (div Download the app to find your gate, track your bags, upgrade your seats and more. ) ) ) ) ) (ul (li id=4 (a About Us ) ) (a id=5 Investor Relations ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: find my trip with confirmation number SFTBAO including first and last name Joe Lukeman\nPrevious actions:\n[combobox]  Find Your Trip By -> CLICK\n[option]  Confirmation Number -> CLICK\n[input]   -> TYPE: SFTBAO\n[input]   -> TYPE: Joe\n[input]   -> TYPE: Lukeman\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (button id=0 submit (span Submit ) )\nC. (div id=1 (div (a EXPLORE THE HISTORIC SITES OF BOSTON\nD. (div id=2 (a (b THE ONBOARD EXPERIENCE ) (p You\nE. (div id=3 (div (span TRAVEL WITH CONFIDENCE WITH THE FLY\nF. (li id=4 (a About Us ) )\nG. (a id=5 Investor Relations )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "12355",
+            "12964",
+            "13076",
+            "12829",
+            "12625",
+            "13086"
+        ],
+        "gt": "12355"
+    },
+    {
+        "seq_context": "(html (app-home (div (nav main (ul tablist (a id=0 tab FLIGHT STATUS ) ) ) (div tabpanel (form (div (span or ) (div id=1 (button submit (span Submit ) ) ) ) ) ) ) (main main (a id=2 (div (span EXPLORE DESTINATIONS & TRAVEL REQUIREMENTS ) (div Use our interactive Delta Discover Map to find out what's open for travel and get details on any potential entry ) ) ) ) (div (a id=3 (img search ) (span Search ) ) (a id=4 Message Us ) (a id=5 (span United States - English ) (span Link to change the language ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find the status of March 25 flights from New York airports to Columbus in Ohio.\nPrevious actions:\n[tab]  FLIGHT STATUS -> CLICK\n[button]  \ue908 Search by date required selected as 19 March 202... -> CLICK\n[link]  25 March 2023, Saturday -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 tab FLIGHT STATUS )\nC. (div id=1 (button submit (span Submit ) ) )\nD. (a id=2 (div (span EXPLORE DESTINATIONS & TRAVEL REQUIREMENTS )\nE. (a id=3 (img search ) (span Search ) )\nF. (a id=4 Message Us )\nG. (a id=5 (span United States - English ) (span Link\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "7491",
+            "8601",
+            "7938",
+            "8378",
+            "8474",
+            "8296"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (body (app-home (nav main (div (a navigation menu menu ) (ngc-logo id=0 (div (img delta air lines ) (img skyteam ) ) ) ) ) (main main (div (li id=1 (a GIFT CARDS ) ) (div id=2 (div (span EXPLORE DESTINATIONS & TRAVEL REQUIREMENTS ) (div Use our interactive Delta Discover Map to find out what's open for travel and get details on any potential entry ) ) ) ) ) (div (li id=3 (a Accessibility ) ) (a id=4 (img facebook ) ) ) ) (a dialog feedback, opens dialog (svg id=5 (title Play Icon ) ) (span Feedback ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find the status of March 25 flights from New York airports to Columbus in Ohio.\nPrevious actions:\n[link]  25 March 2023, Saturday -> CLICK\n[button]  done -> CLICK\n[link]  Depart City required From -> CLICK\n[textbox]  Origin City or Airport -> TYPE: New York\n[link]  NYC New York City Area Airports, NY -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (ngc-logo id=0 (div (img delta air lines ) (img skyteam\nC. (li id=1 (a GIFT CARDS ) )\nD. (div id=2 (div (span EXPLORE DESTINATIONS & TRAVEL REQUIREMENTS )\nE. (li id=3 (a Accessibility ) )\nF. (a id=4 (img facebook ) )\nG. (svg id=5 (title Play Icon ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "16173",
+            "16974",
+            "16999",
+            "16658",
+            "16891",
+            "16450"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (body (ul id=0 (a Home ) (li (a button Concerts ) (div (a 3 Doors Down ) (a AFI ) (a Aaron Lewis ) (a Adema ) (a Afroman ) (a Air Supply ) (a Alabama - The Band ) (a Alanis Morissette ) (a Amanda Perez ) (a Amy Grant ) (a Andy Griggs ) (a Ani DiFranco ) (a Anti-Flag ) (a Ashanti ) (a Asleep At The Wheel ) (a Atmosphere ) (a Authority Zero ) (a Average White Band ) (a View All Concerts ) ) ) (li (a button Sports ) (ul tablist ) ) ) (div id=1 (div listbox (div (a Buy Tickets ) (img nba tickets ) ) (div (a Buy Tickets ) (img adele tickets ) ) (div (div (div Madonna Tickets ) (div Amazing deals on Madonna tickets! ) (a Buy Tickets ) ) (img madonna tickets ) ) (div (a Buy Tickets ) (img taylor swift tickets ) ) ) (a button (span Previous ) ) (a button (span Next ) ) (div (div (input id=2 text query search for artists, teams or ) (button submit ) ) (div (span Trending ) (a Arizona Cardinals ) (a Arizona Diamondbacks ) (a Los Angeles Angels ) (a 3 Doors Down ) (a AFI ) (a Aaron Lewis ) (a 42nd Street ) (a Adam Sandler ) (a Aida ) ) ) ) (div (a id=3 Amanda Perez ) (li id=4 (a Los Angeles Angels ) ) (a id=5 Fiddler On The Roof ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Browse the venues that are playing the Wicked show from Oct 5 to Oct 24 2023\nPrevious actions:\nNone\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (ul id=0 (a Home ) (li (a button Concerts )\nC. (div id=1 (div listbox (div (a Buy Tickets ) (img\nD. (input id=2 text query search for artists, teams or )\nE. (a id=3 Amanda Perez )\nF. (li id=4 (a Los Angeles Angels ) )\nG. (a id=5 Fiddler On The Roof )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: D\nAction: TYPE\nValue: Wicked\n",
+        "candidate_ids": [
+            "73",
+            "3499",
+            "3775",
+            "210",
+            "3696",
+            "2191"
+        ],
+        "gt": "73"
+    },
+    {
+        "seq_context": "(html (body (div (table grid (tbody (tr row (a id=0 (span Tickets ) ) ) (tr row (td id=1 (div (span Fri ) (span Apr 14 ) (span 7:30pm ) ) ) (td id=2 (a (span Wicked ) (span Apollo Victoria Theatre ) (span London, GL ) ) ) ) (tr row (a id=3 (span Wicked ) (span Apollo Victoria Theatre ) (span London, GL ) ) ) ) ) (iframe fb:page facebook social plugin f22569b367eaa4 (div feed (div id=4 (div (a ticket center ) (div (p Luke Bryan and Brett Eldredge come together in concert to give you an amazing experience! Buy tickets today! ) (a http://www.ticketcenter.com//luke-bryan-with-brett-eldred/ ) ) ) ) ) ) ) (tr (th May 2023 ) (i id=5 ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Browse the venues that are playing the Wicked show from Oct 5 to Oct 24 2023\nPrevious actions:\n[textbox]  Search for artists, teams or venues... -> TYPE: Wicked\n[option]  Wicked -> CLICK\n[button]  All dates -> CLICK\n[textbox]  Select Date Range -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 (span Tickets ) )\nC. (td id=1 (div (span Fri ) (span Apr 14 )\nD. (td id=2 (a (span Wicked ) (span Apollo Victoria Theatre\nE. (a id=3 (span Wicked ) (span Apollo Victoria Theatre )\nF. (div id=4 (div (a ticket center ) (div (p Luke\nG. (i id=5 )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: G\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "33665",
+            "36677",
+            "38594",
+            "36227",
+            "36221",
+            "36236"
+        ],
+        "gt": "33665"
+    },
+    {
+        "seq_context": "(html (body (div (table id=0 grid (tr row (th Date ) (th Event ) ) (tbody (tr row (div (span Thu ) (span Apr 13 ) (span 7:30pm ) ) (a (span Wicked ) (span Fabulous Fox Theatre - St. Louis ) (span St. Louis, MO ) ) (span Tickets ) ) (tr row (div (span Fri ) (span Apr 14 ) (span 7:30pm ) ) (a (span Wicked ) (span Apollo Victoria Theatre ) (span London, GL ) ) (span Tickets ) ) (tr row ) (tr row (a id=1 (span Wicked ) (span Gershwin Theatre ) (span New York, NY ) ) ) (tr row (td id=2 (a (span Wicked ) (span Gershwin Theatre ) (span New York, NY ) ) ) ) ) ) (iframe fb:page facebook social plugin f22569b367eaa4 (div (div (a id=3 button Follow Page ) (a button Followed ) ) (div feed (div (a ticket center ) (div id=4 (div (div Ticket Center ) (span about 6 years ago ) ) ) ) ) ) ) ) (input id=5 text 10/24/23 ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Browse the venues that are playing the Wicked show from Oct 5 to Oct 24 2023\nPrevious actions:\n[columnheader]  \ue080 -> CLICK\n[columnheader]  \ue080 -> CLICK\n[columnheader]  \ue080 -> CLICK\n[gridcell]  1 -> CLICK\n[gridcell]  24 -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (table id=0 grid (tr row (th Date ) (th Event\nC. (a id=1 (span Wicked ) (span Gershwin Theatre ) (span\nD. (td id=2 (a (span Wicked ) (span Gershwin Theatre )\nE. (a id=3 button Follow Page )\nF. (div id=4 (div (div Ticket Center ) (span about 6\nG. (input id=5 text 10/24/23 )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: G\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "97344",
+            "100328",
+            "99967",
+            "102289",
+            "99864",
+            "102180"
+        ],
+        "gt": "97344"
+    },
+    {
+        "seq_context": "(html (div (div (div (div (b id=0 Select Your Park ) (p Six Flags has 27 parks across the United States, Mexico and Canada with world-class coasters, family rides for all ages, ) ) (div select (div (div id=1 (span Massachusetts ) (a option (div (span Six Flags New England ) (small Massachusetts, MA ) ) ) ) (div (span New Jersey ) (a option ) (a id=2 option (div (span Six Flags Great Adventure ) (small Jackson, NJ ) ) ) ) (div (span New York ) (a id=3 option (div (span Great Escape ) (small Lake George, NY ) ) ) (a option ) (a option ) (a option ) ) ) ) ) (form news letters form (iframe recaptcha a-6dy8uclmapx5 (input) (div id=4 (div (span checkbox ) (label I'm not a robot ) ) (div (div reCAPTCHA ) (div (a Privacy ) (span - ) (a Terms ) ) ) ) ) ) ) (nav navigation (a id=5 Espaol ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Buy a diamond pass in New York's, Great escape park, add one meal dining plan to it, and select the flexible payment plan for Jame Jones. The email address is jame_jones@hotmail.com, zip code 10005 and age is 35.\nPrevious actions:\n[button]  Browse the Parks Below -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (b id=0 Select Your Park )\nC. (div id=1 (span Massachusetts ) (a option (div (span Six\nD. (a id=2 option (div (span Six Flags Great Adventure )\nE. (a id=3 option (div (span Great Escape ) (small Lake\nF. (div id=4 (div (span checkbox ) (label I'm not a\nG. (a id=5 Espaol )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "11819",
+            "15257",
+            "11807",
+            "11771",
+            "15695",
+            "11612"
+        ],
+        "gt": "11819"
+    },
+    {
+        "seq_context": "(html (div (div id=0 select (div Great Escape ) (div (a option (div (span Hurricane Harbor Phoenix ) (span Phoenix, AZ ) ) ) (div (a option (div (span Six Flags Magic Mountain ) (span Los Angeles, CA ) ) ) (a option (div (span Hurricane Harbor Los Angeles ) (span Los Angeles, CA ) ) ) (a option (div (span Six Flags Discovery Kingdom ) (span San Francisco/Sacramento, CA ) ) ) (a option (div (span Hurricane Harbor Concord ) (span San Francisco/Sacramento, CA ) ) ) ) (div (a option (div (span Six Flags Over Georgia ) (span Atlanta, GA ) ) ) (a option (div (span Six Flags White Water ) (span Atlanta, GA ) ) ) ) (a option ) ) ) (div (ul (li General Parking ) (li Unlimited visits to Six Flags Great Escape ) (li id=1 5% Food & Merchandise discounts ) (li Unlimited visits through Sept 4 2023 ) (li Unlimited visits to Hurricane Harbor ) (li Skip the line passes ) ) (a id=2 (div (div (div (span $149.99 ) (div (span Or as low as ) (span (b $ ) (span 11 ) (sup .99 ) (sub /mo ) ) (span after $54.07 initial payment ) ) ) (div (h2 2023 Diamond Pass ) (span Best Value! ) ) ) (ul (li Preferred Parking ) (li Unlimited visits to Six Flags Great Escape ) (li 20% Food & Merchandise discounts ) (li Unlimited visits for all of 2023 ) (li Unlimited visits to Hurricane Harbor ) (li 4 Skip the Line Passes ) (li 5 Specialty Rate Tickets ) (li 2023 Season Drink Bottle ) (li 50% Weekday Cabana Discounts ) (li 50% off Season GO FAST PASS ) (li Priority entry to park and water park ) (li Unlimited Visits to Six Flags Outdoor Parks ) ) (span Purchase Pass ) ) ) ) (ul (li id=3 (span Diversity & Inclusion ) ) (ul (a id=4 (span One Day Add-Ons ) ) (li id=5 (span Military ) (div (a facebook ) (a twitter ) (a instagram ) (a youtube ) (p #mysixflags ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Buy a diamond pass in New York's, Great escape park, add one meal dining plan to it, and select the flexible payment plan for Jame Jones. The email address is jame_jones@hotmail.com, zip code 10005 and age is 35.\nPrevious actions:\n[button]  Browse the Parks Below -> CLICK\n[span]  Great Escape -> CLICK\n[button]  Go! -> CLICK\n[link]  Tickets & Passes \uf078 -> CLICK\n[link]  Tickets & Passes -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 select (div Great Escape ) (div (a option\nC. (li id=1 5% Food & Merchandise discounts )\nD. (a id=2 (div (div (div (span $149.99 ) (div (span\nE. (li id=3 (span Diversity & Inclusion ) )\nF. (a id=4 (span One Day Add-Ons ) )\nG. (li id=5 (span Military ) (div (a facebook ) (a\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: D\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "52854",
+            "47633",
+            "55805",
+            "55869",
+            "52664",
+            "55851"
+        ],
+        "gt": "52854"
+    },
+    {
+        "seq_context": "(html (body (div (div (div id=0 (div (nav navigation (ul (li (a Help ) (ul group ) ) (a Jobs ) (a Promo ) (li (a Groups ) (ul group ) ) (input text search... ) ) ) (nav navigation (ul (li (a Help ) (ul group ) ) (a Jobs ) (a Promo ) (li (a Groups ) (ul group ) ) (input text search... ) ) ) ) ) (nav navigation (li id=1 (a Rides & Experiences ) (ul group (a All Things to Do ) (a All Rides ) (a Thrill Rides ) (a Family Rides ) (a Kids Rides ) (a water park rides (span Water Park Rides ) ) (a Experiences ) (a entertainment (span Entertainment ) ) (a Restaurants & Dining ) (a Shops & Gifts ) (a Merch Store ) ) ) ) ) (div (a id=2 (span Lost & Found ) ) (div id=3 Prices, availability of attractions, operating schedule and park policies are subject to change without notice. Processing fees apply to online 2023 Six Flags Entertainment Corporation. All Rights Reserved. See (a copyright and trademarks ) , (a California Privacy Notice ) , and (a California Do Not Sell My Personal Information Request ) ) ) ) (iframe accesso e-commerce store overlay (div main (ng-form (div (div id=4 button (div (div (span Jame ) (span Jones ) ) (div 2023 Diamond Pass ) (div Season Pass ) ) (div button ) ) (div (input id=5 text email email address ) ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Buy a diamond pass in New York's, Great escape park, add one meal dining plan to it, and select the flexible payment plan for Jame Jones. The email address is jame_jones@hotmail.com, zip code 10005 and age is 35.\nPrevious actions:\n[link]  Tickets & Passes -> CLICK\n[span]  Purchase Pass -> CLICK\n[button]  Next -> CLICK\n[input]   -> TYPE: Jame\n[input]   -> TYPE: Jones\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div (nav navigation (ul (li (a Help )\nC. (li id=1 (a Rides & Experiences ) (ul group (a\nD. (a id=2 (span Lost & Found ) )\nE. (div id=3 Prices, availability of attractions, operating schedule and park\nF. (div id=4 button (div (div (span Jame ) (span Jones\nG. (input id=5 text email email address )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: G\nAction: TYPE\nValue: jame_jones@hotmail.com\n",
+        "candidate_ids": [
+            "155234",
+            "152387",
+            "152625",
+            "155080",
+            "145303",
+            "148150"
+        ],
+        "gt": "155234"
+    },
+    {
+        "seq_context": "(html (body (div (div id=0 (div (nav navigation (ul (li (a Help ) (ul group ) ) (a Jobs ) (a Promo ) (li (a Groups ) (ul group ) ) (input id=1 text search... ) ) ) (nav navigation (ul (li (a Help ) (ul group ) ) (a Jobs ) (a Promo ) (li (a Groups ) (ul group ) ) (input text search... ) ) ) ) ) (div id=2 (div (strong Pass benefits subject to change without notice. Pricing shown is available online only. ) (em Passholder benefits may vary by park. Contact the park you are planning to visit for any questions regarding applicable benefits. ) ) ) (a id=3 member support (span Member Support ) ) ) (iframe livechat chat widget (div main (button id=4 button open livechat chat widget ) ) ) (iframe accesso e-commerce store overlay (div main (ng-form (div (button id=5 button Continue ) (button button ) (button button Back ) (button button Delete Form ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Buy a diamond pass in New York's, Great escape park, add one meal dining plan to it, and select the flexible payment plan for Jame Jones. The email address is jame_jones@hotmail.com, zip code 10005 and age is 35.\nPrevious actions:\n[input]   -> TYPE: 10005\n[input]   -> TYPE: 35\n[label]   -> CLICK\n[button]  Continue -> CLICK\n[label]   -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div (nav navigation (ul (li (a Help )\nC. (input id=1 text search... )\nD. (div id=2 (div (strong Pass benefits subject to change without\nE. (a id=3 member support (span Member Support ) )\nF. (button id=4 button open livechat chat widget )\nG. (button id=5 button Continue )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: G\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "305341",
+            "304487",
+            "296813",
+            "296692",
+            "302423",
+            "300058"
+        ],
+        "gt": "305341"
+    },
+    {
+        "seq_context": "(html (div (div (div button ) (div id=0 (div (div Trending destinations ) (div Top Middle East & Africa tours ) (div Top Asia tours ) (div Top Australia & the Pacific tours ) (div Top Caribbean tours ) (div id=1 Top Central & South America tours ) (div Top Europe tours ) (div Top North America tours ) ) (div (div (span Rome ) (span Paris ) (span London ) (span Las Vegas ) ) (div (span New York City ) (span Oahu ) (span Florence ) (span Barcelona ) ) (span Amsterdam ) ) ) ) (div (div id=2 (div (span Why book with Viator? ) (div (div (div Ultimate flexibility ) (p Youre in control, with free cancellation and payment options to satisfy any plan or budget. ) ) (div (div Memorable experiences ) (p Browse and book tours and activities so incredible, youll want to tell your friends. ) ) (div (div Quality at our core ) (p High quality standards. Millions of reviews. A Tripadvisor company. ) ) (div (div Award-winning support ) (p New price? New plan? No problem. Were here to help, 24/7. ) ) ) ) ) (a id=3 Things to do in San Francisco ) (div id=4 (div (h3 Popular Attractions ) (ul (a Antelope Canyon ) (a Aquarium of the Pacific ) (a Xcaret ) (a British Museum ) (a San Diego Zoo Safari Park ) (a London Natural History Museum ) (a Xplor Park ) (a Stonehenge ) (a resund Bridge ) (a Distillery Historic District ) (a El Yunque National Park ) (a Chichen Itza ) (a Machu Picchu ) (a Hoover Dam ) (a Teotihuacan ) ) ) ) ) (div (a id=5 facebook ) (a twitter ) (a pinterest ) (a instagram ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Add to my wish list the highest rated activity in Amsterdam.\nPrevious actions:\n[span]  Explore the World -> HOVER\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div (div Trending destinations ) (div Top Middle\nC. (div id=1 Top Central & South America tours )\nD. (div id=2 (div (span Why book with Viator? ) (div\nE. (a id=3 Things to do in San Francisco )\nF. (div id=4 (div (h3 Popular Attractions ) (ul (a Antelope\nG. (a id=5 facebook )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "5657",
+            "7320",
+            "7226",
+            "5624",
+            "7143",
+            "5880"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (div (main main (section (div id=0 (div POPULARITY ) (a button view popular movies (div (svg ipc-icon ) (div (div 420 ) (div (svg ipc-icon ) 5 ) ) ) ) ) (div (section (a id=1 (h3 (span Top cast ) (svg ipc-icon ) ) ) (div group (div id=2 (a Beth Grant ) (span Kitty Farmer ) ) ) ) (div group (div group (span (svg id=3 ipc-icon ) 8.0 ) ) ) ) ) ) (ul (a id=4 button IMDbPro (svg ipc-icon ) ) (a button Box Office Mojo (svg id=5 ipc-icon ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find the movie Donnie Darko and show its complete cast.\nPrevious actions:\n[textbox]  Search IMDb -> TYPE: Donnie Darko\n[link]  Donnie Darko Donnie Darko 2001 Jake Gyllenhaal, Je... -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div POPULARITY ) (a button view popular movies\nC. (a id=1 (h3 (span Top cast ) (svg ipc-icon )\nD. (div id=2 (a Beth Grant ) (span Kitty Farmer )\nE. (svg id=3 ipc-icon )\nF. (a id=4 button IMDbPro (svg ipc-icon ) )\nG. (svg id=5 ipc-icon )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "9478",
+            "11755",
+            "10300",
+            "8810",
+            "9799",
+            "11762"
+        ],
+        "gt": "9478"
+    },
+    {
+        "seq_context": "(html (div (header banner (div dialog ) (nav primary ) (section id=0 (form search (div (label Search make, model, or keyword ) (input search search by make, model, or ) (button submit submit search by make, model, (span Search CarMax inventory ) ) ) ) (div (div Featured ) (ul (div SUVs ) (div Hybrids & EVs ) (div Trucks ) (div Vans & Minivans ) (div 21 Most Reliable Cars ) ) ) (div (div Featured ) (ul (div SUVs ) (div Hybrids & EVs ) (div Trucks ) (div Vans & Minivans ) (div 21 Most Reliable Cars ) ) ) ) ) (main main (div (h1 Love Your Car ) (a id=1 Search Cars ) ) (div id=2 (div (div (h3 Est. Vehicle Price ) (span budget calculator details. content opens in popup. ) ) (div (div (div Your budget is now around $21,291 ) (div $21,291 ) ) (a button Get Pre-Qualified ) ) ) ) (div tablist (div id=3 (button tab (span Popular ) ) (button tab (span (span Browse By ) Type ) ) (button tab (span (span Browse By ) Brand ) ) (button tab (span (span Browse By ) Year ) ) ) ) ) (footer contentinfo (div (li id=4 (a How it works ) ) (a id=5 Search Jobs ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: see Nissan and Honda cars for sale near Kentwood, MI 49512\nPrevious actions:\nNone\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (section id=0 (form search (div (label Search make, model, or\nC. (a id=1 Search Cars )\nD. (div id=2 (div (div (h3 Est. Vehicle Price ) (span\nE. (div id=3 (button tab (span Popular ) ) (button tab\nF. (li id=4 (a How it works ) )\nG. (a id=5 Search Jobs )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "190",
+            "1483",
+            "396",
+            "2238",
+            "2205",
+            "946"
+        ],
+        "gt": "190"
+    },
+    {
+        "seq_context": "(html (main search cars (div (aside region search filters (div id=0 (button button cylinders (h4 Cylinders ) ) ) ) (section search results (section search results (div (article select 2012 chevrolet cruze ls (div select car (div (button id=1 button left arrow button ) (button button right arrow button ) ) ) ) (article select 2014 jeep grand cherokee (div select car (table table (tr (td id=2 Overhead Airbags ) (td Bluetooth Technology ) ) ) ) ) (article select 2020 nissan rogue s (div select car (div (table table (tr row (td id=3 cell engine torque Engine Torque ) (td cell 175/4400 rpm 175/4400 RPM ) ) ) (table table (tr (td Cruise Control ) (td id=4 Overhead Airbags ) ) ) ) ) ) (article select 2019 mazda mazda3 premium (div select car (div (table table ) (div rowgroup highlights Highlights ) (table table ) (div id=5 rowgroup all features All features ) (table table ) (div rowgroup ratings & reviews Ratings & reviews ) (table table ) ) ) ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: see Nissan and Honda cars for sale near Kentwood, MI 49512\nPrevious actions:\n[link]  SEARCH CARS -> CLICK\n[heading]  Distance & Shipping -> CLICK\n[button]  Change Location -> CLICK\n[textbox]  Enter ZIP or State -> TYPE: 49512\n[button]  Set My Store -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (button button cylinders (h4 Cylinders ) ) )\nC. (button id=1 button left arrow button )\nD. (td id=2 Overhead Airbags )\nE. (td id=3 cell engine torque Engine Torque )\nF. (td id=4 Overhead Airbags )\nG. (div id=5 rowgroup all features All features )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "77279",
+            "76655",
+            "80122",
+            "77933",
+            "79607",
+            "79566"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (div (a id=0 pc builder (span PC Builder ) ) (div (li id=1 (a computer systems (div Computer Systems ) ) (div (ul (li (a Desktop Computers ) (a Desktop Computers ) ) (a Gaming Desktops ) (a All-in-One Computers ) (a Server & Workstation Systems ) (a Chromebox Desktops & Mini PCs ) (a Business Desktops ) ) (ul (li (a Laptops / Notebooks ) (a Laptops / Notebooks ) ) (li (a 2-in-1 Laptops ) (ul (a 2-in-1 Laptops ) (a 2 in 1 Accessories ) (a External CD / DVD / Blu-Ray Drives ) ) ) (a Chromebooks ) (li (a Business Laptops ) (ul (a Business Laptops ) (a Laptop Add-on Cards ) (a Laptop Batteries / AC Adapters ) (a Laptop Internal Hard Drives ) (a Laptop Memory ) (a Laptop Networking ) (a Laptop Cooling Pads ) (a Mice ) ) ) (a Touchscreen Systems ) ) ) ) (a id=2 (img whirlpool w3385159 dishwasher upper spray ) ) (div id=3 (img asus rog swift oled pg42uq ) (div (a rating + 3.8 (i rated 3.8 out of 5 ) (span (21) ) ) (a view details ASUS ROG Swift OLED PG42UQ Gaming Monitor - 41.5 4K, OLED, 138Hz (Overclocked), 0.1 ms (GTG), G-SYNC Compatible, Custom Heatsink, ) (div (div (span $ ) (span (strong 1,399 ) (sup .00 ) ) ) (div $1,399.99 ) (span Free Shipping ) ) ) ) (a id=4 irobot (img irobot ) ) ) (li id=5 (a newegg careers Newegg Careers ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\nNone\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (a id=0 pc builder (span PC Builder ) )\nC. (li id=1 (a computer systems (div Computer Systems ) )\nD. (a id=2 (img whirlpool w3385159 dishwasher upper spray ) )\nE. (div id=3 (img asus rog swift oled pg42uq ) (div\nF. (a id=4 irobot (img irobot ) )\nG. (li id=5 (a newegg careers Newegg Careers ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "8172",
+            "15458",
+            "16116",
+            "9085",
+            "15578",
+            "15934"
+        ],
+        "gt": "8172"
+    },
+    {
+        "seq_context": "(html (div (div id=0 (a view details CUSTOMIZE IT ) (a view details Mainstream ) (p Sub $2.5K ) (div (a Build it with INTEL ) (a Build it with AMD ) ) ) (div (div (span Sort By: ) (label id=1 (select (option 0 true Featured Items ) (option 1 Lowest Price ) (option 2 Highest Price ) (option 3 Best Selling ) (option 4 Best Rating ) (option 5 Most Reviews ) ) (span Featured Items ) ) ) (tbody (li id=2 $ (strong 294 ) (sup .99 ) ) (td id=3 (div Core Clock ) (span 3.6 GHz ) ) (tr id=4 (a (img intel core i7-7700k oem processors ) (div (span Intel Core i7-7700K OEM Processors - Desktops ) (span (5) ) ) ) (td (div # of Cores ) (span Quad-Core ) ) (td (div Core Clock ) (span 4.2 GHz ) ) (div Memory ) (td (div TDP ) (span 91W ) ) (td (div Integrated Graphics ) (span Intel HD Graphics 630 ) ) (div (li $ (strong 210 ) (sup .99 ) ) (div (label (input checkbox on ) (span Compare ) ) (button Select ) ) ) ) (img id=5 intel core i7-10700f desktop processor ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[link]  PC Builder -> CLICK\n[link]  \ue902 CPU -> CLICK\n[span]  Intel Core i7 -> CLICK\n[button]  APPLY -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (a view details CUSTOMIZE IT ) (a view\nC. (label id=1 (select (option 0 true Featured Items ) (option\nD. (li id=2 $ (strong 294 ) (sup .99 ) )\nE. (td id=3 (div Core Clock ) (span 3.6 GHz )\nF. (tr id=4 (a (img intel core i7-7700k oem processors )\nG. (img id=5 intel core i7-10700f desktop processor )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: SELECT\nValue: Lowest Price\n",
+        "candidate_ids": [
+            "83778",
+            "83690",
+            "84694",
+            "84408",
+            "85152",
+            "84060"
+        ],
+        "gt": "83778"
+    },
+    {
+        "seq_context": "(html (div (div (li id=0 (div Sold by Newegg ) (label (input checkbox on ) (span (span ON ) (span OFF ) ) ) ) (li id=1 (label (input checkbox on ) (span $25 - $50 ) ) ) ) (tbody (button id=2 Select ) (tr id=3 (a (img hynixhynix hynix 2gb (1x2gb) pc310600 ) (span HYNIXHynix Hmt125U7Bfr8C-G7 Hynix 2Gb (1X2Gb) Pc310600 1333Mhz Dual Rank Unbuffered Non Ecc Ddr3 Sdram 240Pin Dimm Memory Module OEM NEW ) ) (td (div Speed ) (span DDR3 1333 (PC3 10600) ) ) (td (div Module ) (span 2GB ) ) (div Color ) (div CAS Latency ) (div (li $ (strong 10 ) (sup .69 ) ) (div (label (input checkbox on ) (span Compare ) ) (button Select ) ) ) ) (td id=4 (div Module ) ) (li id=5 $ (strong 12 ) (sup .99 ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[button]  \uf067 SELECT -> CLICK\n[link]  \ue906 Motherboard -> CLICK\n[button]  \uf067 SELECT -> CLICK\n[link]  \ue905 Memory -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 (div Sold by Newegg ) (label (input checkbox\nC. (li id=1 (label (input checkbox on ) (span $25 -\nD. (button id=2 Select )\nE. (tr id=3 (a (img hynixhynix hynix 2gb (1x2gb) pc310600 )\nF. (td id=4 (div Module ) )\nG. (li id=5 $ (strong 12 ) (sup .99 ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: D\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "170908",
+            "181012",
+            "180162",
+            "181085",
+            "179048",
+            "181646"
+        ],
+        "gt": "170908"
+    },
+    {
+        "seq_context": "(html (body id=0 (div (div dialog (svg img (title Close this dialog ) ) (a Privacy Policy ) ) (button cookie preferences (svg img ) ) (div dialog (svg img (title Close Cookie Preferences ) ) ) ) (div (div (i notify ) (div (a newegg business ) (a feedback ) (a help center ) ) ) (div (ol (a home Home ) (a newegg pc builder Newegg PC Builder ) (li Case ) ) (div (span Case ) (a how can we improve? How can we improve? ) ) ) (div (label id=1 (input checkbox on ) (span MicroATX ) ) (table id=2 (tbody (tr (a Product ) (a Type ) (a Color ) (a LED ) (a Case Material ) (a Form Factor ) (a Rating ) (a Price ) ) (tr (a (img diypc diy-s07 computer case ) (div (span DIYPC DIY-S07 Computer Case ) (span (73) ) ) ) (td (div Type ) (span ATX Mid Tower ) ) (td (div Color ) (span Black ) ) (div LED ) (td (div Case Material ) (span Steel ) ) (td (div Form Factor ) (span ATX ) ) (button id=3 Select ) ) (td id=4 (div LED ) (span Addressable RGB ) ) ) ) ) (li id=5 (a newegg insider Newegg Insider ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[link]  \ue90a Video Cards -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\n[button]  \uf067 SELECT -> CLICK\n[link]  \ue900 Case -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (body id=0 (div (div dialog (svg img (title Close this\nC. (label id=1 (input checkbox on ) (span MicroATX ) )\nD. (table id=2 (tbody (tr (a Product ) (a Type )\nE. (button id=3 Select )\nF. (td id=4 (div LED ) (span Addressable RGB ) )\nG. (li id=5 (a newegg insider Newegg Insider ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "296001",
+            "309769",
+            "309112",
+            "304324",
+            "296054",
+            "311353"
+        ],
+        "gt": "296001"
+    },
+    {
+        "seq_context": "(html (div (div (input id=0 checkbox on ) (dt id=1 Manufacturer ) (dd (ul id=2 (label (input checkbox on ) (span $10 - $25 ) ) (label (input checkbox on ) (span $25 - $50 ) ) (label (input checkbox on ) (span $50 - $75 ) ) (label (input checkbox on ) (span $75 - $100 ) ) (label (input checkbox on ) (span $100 - $200 ) ) (label (input checkbox on ) (span $200 - $300 ) ) ) (span Show More ) ) ) (table id=3 (tbody (tr (a Product ) (a Capacity ) (a Cache ) (a Form Factor ) (a Interface ) (a Rating ) (a Price ) ) (tr (a (img silicon power p34a60 ) (div (span Silicon Power P34A60 SP002TBP34A60M28 ) (span (283) ) ) ) (td (div Capacity ) (span 2TB ) ) (div Cache ) (td (div Form Factor ) (span M.2 2280 ) ) (td (div Interface ) (span PCI-Express 3.0 x4 ) ) (div (li $ (strong 93 ) (sup .99 ) ) (button Select ) ) ) (td id=4 (div Form Factor ) (span M.2 2280 ) ) (td id=5 (div Cache ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[link]  \ue908 Power Supply -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\n[button]  \uf067 SELECT -> CLICK\n[link]  \ue904 Storage -> CLICK\n[link]  SSD Storage -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (input id=0 checkbox on )\nC. (dt id=1 Manufacturer )\nD. (ul id=2 (label (input checkbox on ) (span $10 -\nE. (table id=3 (tbody (tr (a Product ) (a Capacity )\nF. (td id=4 (div Form Factor ) (span M.2 2280 )\nG. (td id=5 (div Cache ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "417077",
+            "416668",
+            "420889",
+            "421521",
+            "420351",
+            "418263"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (div (div (div id=0 (a newegg.com - computer parts, laptops, (img newegg ) ) ) (a id=1 shopping cart (i icon of shopping cart ) ) ) (div (li id=2 (label (input checkbox on ) (span $75 - $100 ) ) ) (div (div (span Sort By: ) (label id=3 (select (option 0 true Featured Items ) (option 1 Lowest Price ) (option 2 Highest Price ) (option 3 Best Selling ) (option 4 Best Rating ) (option 5 Most Reviews ) ) (span Featured Items ) ) ) (button id=4 Select ) ) ) (div (div (span 5 ) (span 6 ) (span 7 ) (span id=5 8 ) (span 9 ) (span 10 ) (span 11 ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[button]  \uf067 SELECT -> CLICK\n[link]  \ue903 CPU Cooler -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\n[button]  \uf067 SELECT -> CLICK\n[link]  \ue907 Operating System -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (a newegg.com - computer parts, laptops, (img newegg\nC. (a id=1 shopping cart (i icon of shopping cart )\nD. (li id=2 (label (input checkbox on ) (span $75 -\nE. (label id=3 (select (option 0 true Featured Items ) (option\nF. (button id=4 Select )\nG. (span id=5 8 )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: SELECT\nValue: Lowest Price\n",
+        "candidate_ids": [
+            "532998",
+            "533526",
+            "532372",
+            "534912",
+            "532773",
+            "532281"
+        ],
+        "gt": "532998"
+    },
+    {
+        "seq_context": "(html (div (div (li id=0 (label (input checkbox on ) (span Monoprice Inc. ) ) ) (li id=1 (label (input checkbox on ) (span $1250 - $1500 ) ) ) ) (div (div (span Sort By: ) (label id=2 (select (option 0 true Featured Items ) (option 1 Lowest Price ) (option 2 Highest Price ) (option 3 Best Selling ) (option 4 Best Rating ) (option 5 Most Reviews ) ) (span Featured Items ) ) ) (tbody (div (label id=3 (input checkbox on ) (span Compare ) ) (button Select ) ) (button id=4 Select ) (div (label id=5 (input checkbox on ) (span Compare ) ) (button Select ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[link]  \ue907 Operating System -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\n[button]  \uf067 SELECT -> CLICK\n[i]   -> CLICK\n[link]  LCD / LED Monitors Accessories -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 (label (input checkbox on ) (span Monoprice Inc.\nC. (li id=1 (label (input checkbox on ) (span $1250 -\nD. (label id=2 (select (option 0 true Featured Items ) (option\nE. (label id=3 (input checkbox on ) (span Compare ) )\nF. (button id=4 Select )\nG. (label id=5 (input checkbox on ) (span Compare ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: D\nAction: SELECT\nValue: Lowest Price\n",
+        "candidate_ids": [
+            "592459",
+            "592668",
+            "592897",
+            "588549",
+            "593559",
+            "588939"
+        ],
+        "gt": "592459"
+    },
+    {
+        "seq_context": "(html (div (div (div (li id=0 (label (input checkbox on ) (span Headphone ) ) ) (li id=1 (label (input checkbox on ) (span Cyber Acoustics ) ) ) ) (div (div id=2 (img mainstream ) (div (a view details CUSTOMIZE IT ) (a view details Mainstream ) (p Sub $2.5K ) (div (a Build it with INTEL ) (a Build it with AMD ) ) ) ) (div (span Sort By: ) (label id=3 (select (option 0 true Featured Items ) (option 1 Lowest Price ) (option 2 Highest Price ) (option 3 Best Selling ) (option 4 Best Rating ) (option 5 Most Reviews ) ) (span Featured Items ) ) ) ) ) (div (div Company Information ) (ul id=4 (a about newegg About Newegg ) (a investor relations Investor Relations ) (a Awards/Rankings ) (a hours and locations Hours and Locations ) (a press inquiries Press Inquiries ) (li id=5 (a newegg careers Newegg Careers ) ) (a newsroom Newsroom ) (a newegg insider Newegg Insider ) (a calif. transparency in supply chains Calif. Transparency in Supply Chains Act ) (a cigna mrf Cigna MRF ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[link]  LCD / LED Monitors Accessories -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\n[button]  \uf067 SELECT -> CLICK\n[i]   -> CLICK\n[link]  Headphones Accessories -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 (label (input checkbox on ) (span Headphone )\nC. (li id=1 (label (input checkbox on ) (span Cyber Acoustics\nD. (div id=2 (img mainstream ) (div (a view details CUSTOMIZE\nE. (label id=3 (select (option 0 true Featured Items ) (option\nF. (ul id=4 (a about newegg About Newegg ) (a investor\nG. (li id=5 (a newegg careers Newegg Careers ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: SELECT\nValue: Lowest Price\n",
+        "candidate_ids": [
+            "670245",
+            "670151",
+            "672470",
+            "666073",
+            "665786",
+            "672486"
+        ],
+        "gt": "670245"
+    },
+    {
+        "seq_context": "(html (div (div (ul (li id=0 (label (input checkbox on ) (span LANGTU ) ) ) (li id=1 (label (input checkbox on ) (span Fashionit ) ) ) ) (li id=2 (label (input checkbox on ) (span Gunmetal Gray ) ) ) ) (div (div (span Sort By: ) (label id=3 (select (option 0 true Featured Items ) (option 1 Lowest Price ) (option 2 Highest Price ) (option 3 Best Selling ) (option 4 Best Rating ) (option 5 Most Reviews ) ) (span Featured Items ) ) ) (tbody (a id=4 (img corsair k100 rgb gaming keyboard ) (div (span Corsair K100 RGB Optical-Mechanical Gaming Keyboard - Corsair OPX RGB Optical-Mechanical Keyswitches - AXON Hyper-Processing Technology for 4X Faster Throughput ) (span (33) ) ) ) (td id=5 (div Color ) (span Black ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[link]  Headphones Accessories -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\n[button]  \uf067 SELECT -> CLICK\n[i]   -> CLICK\n[link]  Gaming Keyboards Accessories -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 (label (input checkbox on ) (span LANGTU )\nC. (li id=1 (label (input checkbox on ) (span Fashionit )\nD. (li id=2 (label (input checkbox on ) (span Gunmetal Gray\nE. (label id=3 (select (option 0 true Featured Items ) (option\nF. (a id=4 (img corsair k100 rgb gaming keyboard ) (div\nG. (td id=5 (div Color ) (span Black ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: SELECT\nValue: Lowest Price\n",
+        "candidate_ids": [
+            "731666",
+            "741234",
+            "746167",
+            "740018",
+            "746274",
+            "742343"
+        ],
+        "gt": "731666"
+    },
+    {
+        "seq_context": "(html (div (div (div (ul (li id=0 (label (input checkbox on ) (span Sahara Case ) ) ) (li id=1 (label (input checkbox on ) (span 4AllDeals ) ) ) ) (dl id=2 (dt Seller ) (dd (ul (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) ) (ul (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) (input checkbox on ) ) ) ) (dt Customer Ratings ) ) (div (img id=3 entry level ) (td id=4 (div Backlit ) (span Yes ) ) ) ) (a id=5 cigna mrf Cigna MRF ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Build an entry-level pc with an windows 11 64 bit intel i7 CPU with a256gb ssd drive +  4gb ram and adding cheapest component and accessories available.\nPrevious actions:\n[link]  Gaming Keyboards Accessories -> CLICK\n[combobox]  Featured Items \uf0d7 -> SELECT: Lowest Price\n[button]  \uf067 SELECT -> CLICK\n[i]   -> CLICK\n[link]  Keyboards Accessories -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 (label (input checkbox on ) (span Sahara Case\nC. (li id=1 (label (input checkbox on ) (span 4AllDeals )\nD. (dl id=2 (dt Seller ) (dd (ul (input checkbox on\nE. (img id=3 entry level )\nF. (td id=4 (div Backlit ) (span Yes ) )\nG. (a id=5 cigna mrf Cigna MRF )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "819363",
+            "810504",
+            "822080",
+            "823052",
+            "819267",
+            "825238"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (div (div id=0 (div (li (div Remove Combo Deal Options ) (label (input checkbox on ) (span (span ON ) (span OFF ) ) ) ) (li (div In Stock ) (label (input checkbox on ) (span (span ON ) (span OFF ) ) ) ) (li (div On Sale ) (label (input checkbox on ) (span (span ON ) (span OFF ) ) ) ) (li (div Sold by Newegg ) (label (input checkbox on ) (span (span ON ) (span OFF ) ) ) ) (label (input checkbox on ) (span (span ON ) (span OFF ) ) ) (div Direct From Manufacturer ) ) ) (div (div (a id=1 view details GIGABYTE M32UC 32 144Hz (160Hz OC) 4K UHD Curved Gaming Monitor, SS VA, 3840x2160 Display, 1ms Response Time (MPRT), 1x ) (a standard return policy(new window) Standard Return Policy ) ) (div id=2 (div (img z-edge ) (a rating + 4.3 (i rated 4.3 out of 5 ) (span (33) ) ) ) (a view details Z-EDGE UG30 30 Ultrawide 21:9 WFHD 2560x1080 200Hz 1ms Curved Gaming Monitor, FreeSync, HDR10, 2 x HDMI + DisplayPort + ) (ul (span $269.99 ) (li $ (strong 249 ) (sup .99 ) ) (li (span Save: ) (span 7% ) ) (li Free Shipping ) ) (button add z-edge ug30 30\" ultrawide Add to cart ) ) (li id=3 (div (a greencycle 3 pack compatible for (img greencycle 3 pack compatible for ) ) (a view details GREENCYCLE 3 Pack Compatible for Brother TZe-S151 TZ-S151 TZS151 TZeS151 Tape 24mm 1'' Laminated Black on Clear Extra Strength Label ) ) (div (span $ ) (span (strong 16 ) (sup .99 ) ) ) ) (ul id=4 (span $238.42 ) (li $ (strong 212 ) (sup .49 ) ) (li (span Save: ) (span 10% ) ) ) (div (span Free Shipping ) (span id=5 from United States ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find 32\" Curved monitor and add the third one to the wish list.\nPrevious actions:\n[searchbox]  Search Site -> TYPE: 32\" curved monitor\n[button]  \uf002 -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div (li (div Remove Combo Deal Options )\nC. (a id=1 view details GIGABYTE M32UC 32 144Hz (160Hz OC)\nD. (div id=2 (div (img z-edge ) (a rating + 4.3\nE. (li id=3 (div (a greencycle 3 pack compatible for (img\nF. (ul id=4 (span $238.42 ) (li $ (strong 212 )\nG. (span id=5 from United States )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: C\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "67704",
+            "83012",
+            "96130",
+            "81321",
+            "76103",
+            "95199"
+        ],
+        "gt": "67704"
+    },
+    {
+        "seq_context": "(html (div (div (div id=0 button (h2 Gender ) ) (div region (a id=1 refine by product type: sportstyle Sportstyle Shoes ) ) (div region (a id=2 refine by size: ymd YMD ) ) (div id=3 button (h2 Age Group ) ) ) (div (div (input checkbox on ) (label id=4 (span Product in Favorites ) ) ) (a id=5 Men's Curry Woven 7 Shorts ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Search the cheapest Curry brand unisex athletic shoes with the number 5.5, add to cart and checkout.\nPrevious actions:\n[menuitem]  Curry -> CLICK\n[link]  Shoes -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 button (h2 Gender ) )\nC. (a id=1 refine by product type: sportstyle Sportstyle Shoes )\nD. (a id=2 refine by size: ymd YMD )\nE. (div id=3 button (h2 Age Group ) )\nF. (label id=4 (span Product in Favorites ) )\nG. (a id=5 Men's Curry Woven 7 Shorts )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "12341",
+            "12854",
+            "12571",
+            "12444",
+            "12819",
+            "12676"
+        ],
+        "gt": "12341"
+    },
+    {
+        "seq_context": "(html (div (div id=0 button (h2 Product Type ) ) (div id=1 region (ul (a refine by color: black ) (a refine by color: blue ) (a refine by color: gray ) (a refine by color: pink ) (li id=2 (a refine by color: purple ) ) (a refine by color: red ) (a refine by color: silver ) (li id=3 (a refine by color: white ) ) (a refine by color: yellow ) ) ) (div region (li id=4 (a refine by size: 5k 5K ) ) ) (div region (li id=5 (a refine by price: $50 - $50 - $75 ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Search the cheapest Curry brand unisex athletic shoes with the number 5.5, add to cart and checkout.\nPrevious actions:\n[link]  Shoes -> CLICK\n[button]  Gender \ue90b -> CLICK\n[link]  Unisex -> CLICK\n[heading]  Product Category -> CLICK\n[link]  Shoes -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 button (h2 Product Type ) )\nC. (div id=1 region (ul (a refine by color: black )\nD. (li id=2 (a refine by color: purple ) )\nE. (li id=3 (a refine by color: white ) )\nF. (li id=4 (a refine by size: 5k 5K ) )\nG. (li id=5 (a refine by price: $50 - $50 -\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "32232",
+            "32325",
+            "32310",
+            "32422",
+            "32347",
+            "32287"
+        ],
+        "gt": "32232"
+    },
+    {
+        "seq_context": "(html (div (div id=0 (img under armour logo under armour ) (div (button button open navigation menu ) (button button login ) ) (nav main navigation (ul (a menuitem new (span New ) (img new ) ) (li (a menuitem men (span Men ) ) (div menu men ) ) (li (a menuitem women (span Women ) ) (div menu women ) ) (li (a menuitem kids (span Kids ) ) (div menu kids ) ) (a menuitem shoes ) (li id=1 (a menuitem outlet (span Outlet ) ) (div menu outlet (ul (div (a link of category (img image for banner of category ) ) (a link of category Shop Now ) ) (ul (a menuitem Buy More Save More Deals ) (a menuitem Shoes Under $50 ) (a menuitem Athletic Clothing Under $25 ) (a menuitem Sportsmask 2/$10 ) (a menuitem Buy More Save More Boxerjocks ) ) (li (a heading Men ) (ul (a menuitem Accessories ) (a menuitem Bottoms ) (a menuitem Jackets & Vests ) (a menuitem Shirts & Tops ) (a menuitem Shoes ) (a menuitem Underwear ) ) ) (li (a heading Women ) (ul (a menuitem Accessories ) (a menuitem Bottoms ) (a menuitem Jackets & Vests ) (a menuitem Shirts & Tops ) (a menuitem Shoes ) ) ) ) ) ) ) ) ) (main id=2 (div (div (nav breadcrumb (ol (a Curry Brand Shoes and Gear ) (a Unisex ) (a 5.5 ) (a Athletic Shoes ) (a Shoes ) ) ) (div (h1 Curry Brand Shoes & Gear Unisex Athletic Shoes Shoes - 5.5 ) (div (p 2 Items ) (div (label Sort ) (div (button id=3 combobox button now-trending (span Now Trending ) ) (input now-trending ) ) ) ) ) ) (div id=4 (div region (ul (a refine by price: $75 - $75 - $100 ) (a refine by price: $100 - $100 - $200 ) ) ) ) ) ) (li id=5 (a Order Tracking ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Search the cheapest Curry brand unisex athletic shoes with the number 5.5, add to cart and checkout.\nPrevious actions:\n[link]  Shoes -> CLICK\n[button]  Product Type \ue90b -> CLICK\n[link]  Athletic Shoes -> CLICK\n[button]  Size \ue90b -> CLICK\n[link]  5.5 -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (img under armour logo under armour ) (div\nC. (li id=1 (a menuitem outlet (span Outlet ) ) (div\nD. (main id=2 (div (div (nav breadcrumb (ol (a Curry Brand\nE. (button id=3 combobox button now-trending (span Now Trending ) )\nF. (div id=4 (div region (ul (a refine by price: $75\nG. (li id=5 (a Order Tracking ) )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "49419",
+            "49923",
+            "49054",
+            "49377",
+            "49691",
+            "48303"
+        ],
+        "gt": "49419"
+    },
+    {
+        "seq_context": "(html (div (fieldset radiogroup sizes (div (div id=0 (button button Size & Fit Guide ) (button button close dialog ) ) (input radio size 5.5/7 true ) (input radio size 6/7.5 ) (label id=1 (span 6/7.5 ) (span (Out of Stock) ) ) (input radio size 6.5/8 ) (input radio size 7/8.5 ) ) ) (li id=2 (div (img unisex curry flow 10 'iron ) (a Unisex Curry Flow 10 'Iron Sharpens Iron' Basketball Shoes ) (div (span $160.00 ) (div Price: $160.00 ) ) ) ) (div id=3 (div (div (h2 Product Reviews ) (button button Write a review (span . This action will open a modal dialog. ) ) ) (h3 Average Ratings ) (div (span alert 18 of 16 Reviews ) (button button display a popup with information (span ? ) ) (div (div (span Sort by: ) (button button ) ) (select (option relevancy Most Relevant ) (option mosthelpful Most Helpful ) (option positive true Highest Rated ) (option negative Lowest Rated ) (option mostrecent Newest ) ) ) (button button (span Filter Reviews ) (span Clicking on the following button will update the content below ) ) ) ) (div status (div (button button menu filter by rating (span Rating ) (span Filter by Rating ) ) (select (option 1 true 1 star ) (option 2 2 stars ) (option 3 3 stars ) ) ) ) (ol (button id=4 button see ashley lozano profile. (h3 Ashley lozano ) ) (ul (li Comfort ) (li id=5 Performance ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Search the cheapest Curry brand unisex athletic shoes with the number 5.5, add to cart and checkout.\nPrevious actions:\n[link]  5.5 -> CLICK\n[combobox]  Sort -> CLICK\n[option]  Price (Low - High) -> CLICK\n[link]  Unisex Curry Flow Go Running Shoes -> CLICK\n[button]  Add to Bag -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (button button Size & Fit Guide ) (button\nC. (label id=1 (span 6/7.5 ) (span (Out of Stock) )\nD. (li id=2 (div (img unisex curry flow 10 'iron )\nE. (div id=3 (div (div (h2 Product Reviews ) (button button\nF. (button id=4 button see ashley lozano profile. (h3 Ashley lozano\nG. (li id=5 Performance )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: A\nACTION: None\nValue: None\n",
+        "candidate_ids": [
+            "83576",
+            "85006",
+            "86843",
+            "84754",
+            "84291",
+            "87853"
+        ],
+        "gt": -1
+    },
+    {
+        "seq_context": "(html (div (div (ul (img id=0 free ship to store ) (li id=1 (img marvel spidey and his amazing ) (div (div (div (span $10.99 ) (span Regular ) ) (p Marvel Spidey and His Amazing Friends Supersized (span ... ) ) ) (img free ship to store ) ) ) (a id=2 (img kiddesigns spidey and his amazing ) ) ) (a discovery #mindblown tornado lab 5-speed (img id=3 discovery #mindblown tornado lab 5-speed ) ) ) (div (div id=4 (div (span Department ) (a button department (span Department ) ) ) (ul (a sports & fitness - selecting (span Sports & Fitness ) (span (1) ) ) (a storage & cleaning - selecting (span Storage & Cleaning ) (span (1) ) ) (a toys - selecting this item (span Toys ) (span (21) ) ) ) ) (a id=5 kids - selecting this item (span Kids ) (span (21) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Browse spider-man toys for kids and sort by lowest price.\nPrevious actions:\n[textbox]  Search by keyword or web id -> TYPE: spider-man toy\n[li]  spiderman toy -> CLICK\n[div]  Age Range -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (img id=0 free ship to store )\nC. (li id=1 (img marvel spidey and his amazing ) (div\nD. (a id=2 (img kiddesigns spidey and his amazing ) )\nE. (img id=3 discovery #mindblown tornado lab 5-speed )\nF. (div id=4 (div (span Department ) (a button department (span\nG. (a id=5 kids - selecting this item (span Kids )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: G\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "55424",
+            "54816",
+            "50355",
+            "51465",
+            "54069",
+            "51193"
+        ],
+        "gt": "55424"
+    },
+    {
+        "seq_context": "(html (div main (form storelocator (div (label Search by City, State, or Zip Code ) (input id=0 text postalcode ) ) ) (div (span (span id=1 11:00 AM ) (span - ) (span 8:00 PM ) ) (div (div (span Mon: ) (span id=2 (span 12:00 PM ) (span - ) (span 8:00 PM ) ) ) (span (span 12:00 PM ) (span - ) (span id=3 9:00 PM ) ) ) (span (span id=4 12:00 PM ) (span - ) (span 9:00 PM ) ) (div (h5 id=5 heading Open Until 9:00 PM ) (address 3955 W Broad ST Columbus,OH43228 ) (a Get Directions ) (a Store Details ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find the store location and hours of the closest Gamestop to zip code 90028 and set as home store\nPrevious actions:\n[link]  storePolaris Fashion Place Mall - GameStop -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (input id=0 text postalcode )\nC. (span id=1 11:00 AM )\nD. (span id=2 (span 12:00 PM ) (span - ) (span\nE. (span id=3 9:00 PM )\nF. (span id=4 12:00 PM )\nG. (h5 id=5 heading Open Until 9:00 PM )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: TYPE\nValue: 90028\n",
+        "candidate_ids": [
+            "7642",
+            "10981",
+            "11364",
+            "12684",
+            "11635",
+            "11303"
+        ],
+        "gt": "7642"
+    },
+    {
+        "seq_context": "(html (div (ul listbox (li option ) (li id=0 option (div The Price Is Right ) ) (li option ) (li option ) ) (div (div (div id=1 (a (div The Rookie ) (div (span S05 E18 ) (span 3:00 AM ) (span ABC ) ) ) ) (a id=2 (div That's My Jam ) (div (span S02 E03 ) (span 5:00 AM ) (span NBC ) ) ) ) (div id=3 (div (span Latest TV News ) (div The latest TV and streaming headlines ) ) (div (div (h4 9-1-1 Star Peter Krause Shares How the Investigation into Wendall's Death Has Changed Bobby ) (div (a Max Gao ) (span 13 hours ago ) ) ) (div (h4 The Lord of the Rings: The Rings of Power Season 2: Cast, Plot, Filming Location, and More ) (div (a Tim Surette ) (span 22 hours ago ) ) ) (div (h4 Magnum P.I.'s Tim Kang Breaks Down Gordon's Heartfelt Plea to Rejoin the Force ) (div (a Max Gao ) (span 1 day ago ) ) ) (div (h4 Daisy Jones and the Six Boss Breaks Down Why Simone Had to Be the One to Pull Daisy from the ) (div (a Megan Vick ) (span 3 days ago ) ) ) (h4 Shadow and Bone Boss Reveals What Season 2's Drastic Ending Means for the Netflix Grishaverse ) ) ) (a id=4 (h4 How to Watch Every NBA Game This Week ) ) (div (span TV and Streaming Deals ) (div id=5 Get the most for your money ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find and view the biography for the Host of the Price  is Right.\nPrevious actions:\n[textbox]  Search TV Shows and Movies... -> TYPE: the price is right\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (li id=0 option (div The Price Is Right ) )\nC. (div id=1 (a (div The Rookie ) (div (span S05\nD. (a id=2 (div That's My Jam ) (div (span S02\nE. (div id=3 (div (span Latest TV News ) (div The\nF. (a id=4 (h4 How to Watch Every NBA Game This\nG. (div id=5 Get the most for your money )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "11243",
+            "12276",
+            "11715",
+            "13427",
+            "11986",
+            "13397"
+        ],
+        "gt": "11243"
+    },
+    {
+        "seq_context": "(html (div (form search (div tabpanel (div (div Where ) (input id=0 query search destinations ) ) ) ) (div (div group (div (div Rhinebeck, New York ) (span 497 miles away ) (span Sep 12 17 ) (div id=1 (span (div (span $485 ) (span night ) ) (span $485 per night ) ) ) (span img 4.9 out of 5 average ) ) ) (div group (div (span id=2 $374 ) (span night ) ) ) (div group (span (div id=3 (span $175 ) (span night ) ) (span $175 per night ) ) ) (div group (div group (div (button id=4 button previous photo: copper hill, virginia ) (button button next photo: copper hill, virginia ) ) ) ) (div group (div (div id=5 Austin, Texas ) (span 1,068 miles away ) (span Apr 23 30 ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find a private room in New York for 1 April and checkout on 2 April for 2 adults\nPrevious actions:\n[button]  Location Anywhere -> CLICK\n[textbox]  Where -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (input id=0 query search destinations )\nC. (div id=1 (span (div (span $485 ) (span night )\nD. (span id=2 $374 )\nE. (div id=3 (span $175 ) (span night ) )\nF. (button id=4 button previous photo: copper hill, virginia )\nG. (div id=5 Austin, Texas )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: B\nAction: TYPE\nValue: New York\n",
+        "candidate_ids": [
+            "19227",
+            "22195",
+            "22050",
+            "22272",
+            "21115",
+            "20633"
+        ],
+        "gt": "19227"
+    },
+    {
+        "seq_context": "(html (div (form search (div tabpanel (div (div tabpanel (div application calendar (div (div id=0 (div (h2 February 2023 ) (tbody (tr (td button 1, wednesday, february 2023. past (div 1 ) ) (td button 2, thursday, february 2023. past (div 2 ) ) (td button 3, friday, february 2023. past (div 3 ) ) (td button 4, saturday, february 2023. past (div 4 ) ) ) (tr (td button 5, sunday, february 2023. past (div 5 ) ) (td button 6, monday, february 2023. past (div 6 ) ) (td button 7, tuesday, february 2023. past (div 7 ) ) (td button 8, wednesday, february 2023. past (div 8 ) ) (td button 9, thursday, february 2023. past (div 9 ) ) (td button 10, friday, february 2023. past (div 10 ) ) (td id=1 button 11, saturday, february 2023. past (div 11 ) ) ) (tr (td button 12, sunday, february 2023. past (div 12 ) ) (td button 13, monday, february 2023. past (div 13 ) ) (td button 14, tuesday, february 2023. past (div 14 ) ) (td button 15, wednesday, february 2023. past (div 15 ) ) (td button 16, thursday, february 2023. past (div 16 ) ) (td button 17, friday, february 2023. past (div 17 ) ) (td button 18, saturday, february 2023. past (div 18 ) ) ) (tr (td button 19, sunday, february 2023. past (div 19 ) ) (td button 20, monday, february 2023. past (div 20 ) ) (td button 21, tuesday, february 2023. past ) ) ) ) ) (tr (td button 14, sunday, may 2023. available. ) (td button 15, monday, may 2023. available. ) (td id=2 button 16, tuesday, may 2023. available. (div 16 ) ) (td button 17, wednesday, may 2023. available. ) (td button 18, thursday, may 2023. available. ) (td button 19, friday, may 2023. available. ) ) ) ) ) (div (div id=3 button (div (div Who ) (div Add guests ) ) ) (button button ) ) ) ) ) (div (div group (div (div Lac-Beauport, Canada ) (span 761 miles away ) (span Mar 3 8 ) (div id=4 (span (div (span $292 ) (span night ) ) (span $292 per night ) ) ) (span img 4.98 out of 5 average ) ) ) (div id=5 (div group (div (div (div Galveston, Texas ) (span 1,005 miles away ) (span Apr 1 6 ) (span img 4.96 out of 5 average ) ) (div group ) ) ) ) ) ) )",
+        "normal_prompt": "Based on the HTML webpage above, try to complete the following task:\nTask: Find a private room in New York for 1 April and checkout on 2 April for 2 adults\nPrevious actions:\n[textbox]  Where -> CLICK\n[textbox]  Where -> TYPE: New York\n[div]  New York City, NY -> CLICK\n[button]  1, Saturday, April 2023. Available. Select as chec... -> CLICK\n[button]  2, Sunday, April 2023. Available. Select as checko... -> CLICK\nWhat should be the next action? Please select from the following choices (If the correct action is not in the page above, please select A. 'None of the above'):\n\nA. None of the above\nB. (div id=0 (div (h2 February 2023 ) (tbody (tr (td\nC. (td id=1 button 11, saturday, february 2023. past (div 11\nD. (td id=2 button 16, tuesday, may 2023. available. (div 16\nE. (div id=3 button (div (div Who ) (div Add guests\nF. (div id=4 (span (div (span $292 ) (span night )\nG. (div id=5 (div group (div (div (div Galveston, Texas )\n\nEnsure your answer is strictly adhering to the format provided below. \n        Please do not leave any explanation in your answers of the final standardized format part.        \n        The format is:\n ELEMENT: The uppercase letter of your choice.\n ACTION: Choose an action from {CLICK, TYPE, SELECT}.\n\n        VALUE: Provide additional input based on ACTION. \n The VALUE means:If ACTION == TYPE, specify the text to be typed.\n        If ACTION == SELECT, specify the option to be chosen.If ACTION == CLICK, write None.",
+        "normal_gpt_output": "ELEMENT: E\nAction: CLICK\nValue: None\n",
+        "candidate_ids": [
+            "61626",
+            "62496",
+            "61338",
+            "60951",
+            "63664",
+            "60994"
+        ],
+        "gt": "61626"
+    }
+]
