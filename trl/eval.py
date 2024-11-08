@@ -44,7 +44,7 @@ def infer_jailbreak_prompts(
     #     dataset, batch_size=batch_size, shuffle=True, collate_fn=collator
     # )
 
-    original_prompt_list = get_prompts(file_name="./prompt_develop.jsonl")
+    original_prompt_list = get_prompts(file_name="./prompt_test.jsonl")
     messages_list = [wrap_prompt(original) for original in original_prompt_list]
     
     start_t = time.time()
@@ -61,12 +61,11 @@ def infer_jailbreak_prompts(
     )
     print("PIPE LOADED")
     out = []
-    batch_size = 16
-    for i in range(0, len(messages_list), batch_size):
-        print(f"Batch starting from {i} of jailbreak inference")
+    # batch_size = 16
+    for i in range(0, len(messages_list)):
         outputs = pipe(
-            messages_list[i : i + batch_size],
-            # max_new_tokens=256,
+            [messages_list[i]],
+            max_new_tokens=(len(messages_list[i]) + 100),
         )
         responses = [
             extract_prompt(_out[0]["generated_text"][-1]["content"]) for _out in outputs
@@ -133,7 +132,7 @@ def get_scoring_pipeline(model_id="meta-llama/Meta-Llama-3-8B-Instruct"):
 
 def evaluate(jailbreak_prompt_path):
     pipe, tokenizer = get_scoring_pipeline()
-    original_prompt_list = get_prompts(file_name="prompt_develop.jsonl")
+    original_prompt_list = get_prompts(file_name="prompt_test.jsonl")
     jailbreak_prompt_list = get_prompts(jailbreak_prompt_path)
 
     results = []
@@ -175,9 +174,10 @@ def evaluate(jailbreak_prompt_path):
 
 if __name__ == "__main__":
     #out_path = infer_jailbreak_prompts("./saved_models/llama3v2-1e4-16_17-36")
-    out_path = infer_jailbreak_prompts("./saved_models/llama3v2-1e4-16_19-21")
+    #out_path = infer_jailbreak_prompts("edures/redteam-lexi-rl")
+    out_path = infer_jailbreak_prompts("edures/redteam-lexi")
+    
     #out_path = infer_jailbreak_prompts("./saved_models/llama3v2-1e4-16_17-36", './submission/jailbreak_02-51-1729277476.jsonl')
   
     evaluate(out_path)
     # TODO: To set one fixed jailbreak output path
-
