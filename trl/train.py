@@ -34,9 +34,14 @@ from trl_utils import (
     get_embeddings,
     get_stl_score,
     get_transition_embeddings,
+    wrap_prompt,
+    get_training_jailbreak_score,
+    get_quantized_scoring_pipeline
 )
+from accelerate import Accelerator
 
 assert torch.cuda.is_available()
+accelerator = Accelerator()
 #################
 # CONFIGURATION #
 #################
@@ -51,6 +56,7 @@ config = PPOConfig(
     mini_batch_size=script_args.mini_batch_size,
     batch_size=script_args.batch_size,
     gradient_accumulation_steps=script_args.gradient_accumulation_steps,
+    remove_unused_columns=False
 )
 set_seed(config.seed)  # set before value head, deterministic eval
 
@@ -76,11 +82,7 @@ optimizer = Adam(
     lr=config.learning_rate,  # set optimizer on model parameters that require gradients.
 )
 
-
 tokenizer = AutoTokenizer.from_pretrained(config.model_name)
-# tokenizer.pad_token = (
-#     tokenizer.eos_token
-# )  # GPT-2/3 tokenizer's pad token is not eos_token by default
 
 ppo_trainer = PPOTrainer(
     config,
@@ -97,13 +99,15 @@ ppo_trainer = PPOTrainer(
 # REWARD PIPELINE #
 ###################
 PROMPT_OUT_MAX = 192  # 100 + max of given promtps
-toxicity_tokenizer = AutoTokenizer.from_pretrained("google/shieldgemma-2b")
-toxicity_labels = toxicity_tokenizer.get_vocab()
-toxicity_model = AutoModelForCausalLM.from_pretrained(
-    "google/shieldgemma-2b",
-    torch_dtype=torch.bfloat16,
-).to(ppo_trainer.accelerator.device)
-toxicity_model.eval()
+#toxicity_tokenizer = AutoTokenizer.from_pretrained("google/shieldgemma-2b")
+#toxicity_labels = toxicity_tokenizer.get_vocab()
+#toxicity_model = AutoModelForCausalLM.from_pretrained(
+#    "google/shieldgemma-2b",
+#    torch_dtype=torch.bfloat16,
+#).to(ppo_trainer.accelerator.device)
+#toxicity_model.eval()
+
+scoring_pipe, scoring_tokenizer = get_quantized_scoring_pipeline()
 
 def get_chat(response):
     return [{"role": "user", "content": response}] # shieldgemma throws error if assistant used without user message
@@ -129,17 +133,17 @@ CLAS Policy - Disallowed usage of our models:
 
 target_model_id = script_args.target_model
 target_tokenizer = AutoTokenizer.from_pretrained(target_model_id)
-RESPONSE_MAX_NEW_TOKENS = 384
+RESPONSE_MAX_NEW_TOKENS = 256
 target_pipeline = pipeline(
     "text-generation",
     model=target_model_id,
     tokenizer=target_tokenizer,
     do_sample=True,
     max_new_tokens=RESPONSE_MAX_NEW_TOKENS,
-    device=ppo_trainer.accelerator.device,
+    device_map='auto',
+    #device=ppo_trainer.accelerator.device,
     torch_dtype=torch.bfloat16,
 )
-# FIXME: Change inton conversational?
 
 # important args for PPO
 # used in `generate` function of the PPOTrainer, which is wrapper for trained model's `generate`.
@@ -151,11 +155,11 @@ generation_kwargs = {
     "pad_token_id": tokenizer.eos_token_id,  # for PPO to
 }
 
-ADVERSARIAL_MULTIPLIER = 10  # [0,1] for labels, [-5?, 5?] logits unclamped
-ADVERSARIAL_SHIFT = 0.5
-STEALTH_MULTIPLIER = 2  # [0,1]
+ADVERSARIAL_MULTIPLIER = 5 # [0,1] 
+ADVERSARIAL_SHIFT = 0.0
+STEALTH_MULTIPLIER = 1  # [0,1]
 DIVERSITY_COEFF = 75  # [0,1]
-DIVERSITY_MULTIPLIER = 1
+DIVERSITY_MULTIPLIER = 0 #1
 
 #########
 # TRAIN #
@@ -169,19 +173,29 @@ for epoch in tqdm(range(config.ppo_epochs), "epoch: "):
         new_prompt_tensors = []
         for query in query_tensors:
             initial_length = len(query[0])
-            generation_kwargs["max_new_tokens"] = initial_length + 80  # competition rule, omit some from system tokens
+            generation_kwargs["max_new_tokens"] = initial_length + 100 -  50 # competition rule, omit some from system tokens
             _new_prompt = ppo_trainer.generate(
                 query[0],
                 return_prompt=False,
                 **generation_kwargs,
             )
-            new_prompt_tensors.append(_new_prompt.squeeze())
+            new_prompt_tensors.append(_new_prompt.squeeze()) 
+        if any(_tensor.shape == torch.Size([]) for _tensor in new_prompt_tensors):
+            # Occasional empty output
+            print(f"\nBatch skipped due to empty response, starting with {batch['query'][0][:10]}...\n")
+            del new_prompt_tensors
+            continue
 
-        new_prompts = [
-            extract_prompt(tokenizer.decode(prompt_ids, skip_special_tokens=True)) + '\n'
+        raw_new_prompts = [
+            tokenizer.decode(prompt_ids, skip_special_tokens=True)
             for prompt_ids in new_prompt_tensors
         ]  # dont stack/batch lest padding tokens added
-        batch["response"] = new_prompts
+
+        new_prompts = [
+            extract_prompt(_raw)
+            for _raw in raw_new_prompts
+        ] # remove chat template 
+        batch["response"] = raw_new_prompts
 
         stealth_scores = [
             STEALTH_MULTIPLIER * get_stl_score(_new_prompt, batch["query"][idx])
@@ -189,53 +203,40 @@ for epoch in tqdm(range(config.ppo_epochs), "epoch: "):
         ]
 
         # Get response from the target model
-        response_tensors = []
-        responses = target_pipeline(
-            new_prompts,
+        texts = []
+        new_prompts_in = [wrap_prompt(_prompt, with_system=False) for _prompt in new_prompts]
+        texts = target_pipeline(
+            new_prompts_in,
             return_full_text=False,
             max_new_tokens=RESPONSE_MAX_NEW_TOKENS,
-            eos_token_id=target_tokenizer.eos_token_id,
         )
-        texts = [_r[0]["generated_text"] for _r in responses]  # .squeeze()
+        texts = [_response[0]["generated_text"] for _response in texts]
         batch["target_response"] = texts
 
         # Compute sentiment score
         toxicity_scores = []
-        for _response in texts:
-            chat = get_chat(_response)
-            inputs = toxicity_tokenizer.apply_chat_template(
-                chat, guideline=GUIDELINE, return_tensors="pt", return_dict=True
-            ).to(ppo_trainer.accelerator.device)
-            with torch.no_grad():
-                logits = toxicity_model(**inputs).logits
-            selected_logits = logits[0, -1, [toxicity_labels["Yes"], toxicity_labels["No"]]]
-            probabilities = torch.softmax(selected_logits, dim=0)
-            score = (probabilities[0].item() - ADVERSARIAL_SHIFT) * ADVERSARIAL_MULTIPLIER
+        for i, _response in enumerate(texts):
+            if not _response:
+                print('=========================\n!NO RESPONSE!\n================================')
+            score = get_training_jailbreak_score(scoring_pipe, batch["prompt"][i], new_prompts[i], _response, scoring_tokenizer) * ADVERSARIAL_MULTIPLIER
+
+            #chat = get_chat(_response)
+            #inputs = toxicity_tokenizer.apply_chat_template(
+            #    chat, guideline=GUIDELINE, return_tensors="pt", return_dict=True
+            #).to(ppo_trainer.accelerator.device)
+            #with torch.no_grad():
+            #    logits = toxicity_model(**inputs).logits
+            #selected_logits = logits[0, -1, [toxicity_labels["Yes"], toxicity_labels["No"]]]
+            #probabilities = torch.softmax(selected_logits, dim=0)
+            #score = (probabilities[0].item() - ADVERSARIAL_SHIFT) * ADVERSARIAL_MULTIPLIER
             toxicity_scores.append(score)
 
-        # add diversity reward for mode collapse
-        embeddings = get_transition_embeddings(
-            batch["query"],
-            new_prompts,
-            model=ppo_trainer.model.pretrained_model,
-            model_name=config.model_name,
-            device=ppo_trainer.accelerator.device,
-        )
-
-        distance_matrix = (
-            get_distances(embeddings, ppo_trainer.accelerator.device) / DIVERSITY_COEFF
-        )  
-        diversity_scores = (
-            -1 * torch.mean(torch.exp(-distance_matrix), dim=1) + 1
-        ) * DIVERSITY_MULTIPLIER
-        diversity_scores = diversity_scores.tolist()
         rewards = [
-            torch.tensor(max(min(_tox + _div + _stl, 5), -5))
-            for _tox, _div, _stl in zip(toxicity_scores, diversity_scores, stealth_scores)
+            torch.tensor(max(min(_tox + _stl, 5), -5))
+            for _tox, _stl in zip(toxicity_scores, stealth_scores)
         ]
-        del distance_matrix
         print(
-            f"Totals: {rewards}\n\nComponents: {list(zip(toxicity_scores, diversity_scores, stealth_scores))}"
+            f"Totals: {rewards}\n\nComponents: {list(zip(toxicity_scores, stealth_scores))}"
         )
         # Run PPO step
         query_tensors = [_tensors[0] for _tensors in query_tensors]
@@ -244,8 +245,7 @@ for epoch in tqdm(range(config.ppo_epochs), "epoch: "):
             stats, batch, rewards, columns_to_log=("query", "response", "target_response")
         )
 
-    # Save model every 10 epochs
-    if epoch % 2 == 0:  # 100 == 0:
+    if epoch % 5 == 0:  # 100 == 0:
         if ppo_trainer.accelerator.is_main_process:
             ppo_trainer.save_pretrained(model_save_path)
             print(f"Saved to {model_save_path}")
